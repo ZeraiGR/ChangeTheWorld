@@ -54,7 +54,72 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function tubsManager() {
+        const tabNavs = document.querySelectorAll('.initiatives__tab');
+        const tabPanes = document.querySelectorAll('.initiatives__tab-content');
+        const tabImages = document.querySelectorAll(
+            '.initiatives__images-content'
+        );
+        const earthIcon = document.querySelector('.initiatives');
+
+        for (let i = 0; i < tabNavs.length; i++) {
+            tabNavs[i].addEventListener('click', function (e) {
+                e.preventDefault();
+                earthIcon.classList.toggle('rotate');
+                const activeTabAttr = e.target.getAttribute('data-tab');
+
+                for (let j = 0; j < tabNavs.length; j++) {
+                    const contentAttr =
+                        tabPanes[j].getAttribute('data-tab-content');
+                    const contentImagesAttr =
+                        tabImages[j].getAttribute('data-tab-content');
+
+                    if (activeTabAttr === contentAttr) {
+                        tabNavs[j].classList.add('active');
+                        tabPanes[j].classList.add('active');
+                        tabImages[j].classList.add('active');
+                    } else {
+                        tabNavs[j].classList.remove('active');
+                        tabPanes[j].classList.remove('active');
+                        tabImages[j].classList.remove('active');
+                    }
+                }
+            });
+        }
+    }
+
+    function resumeHundler() {
+        const resumeBtnOpen = document.querySelector('.resume__open-btn'),
+            resumeContent = document.querySelector('.resume__content'),
+            resumeCloseBtn = document.querySelector('.resume__close');
+
+        const toggleContent = function () {
+            resumeContent.classList.add('show');
+            resumeBtnOpen.classList.add('hide');
+        };
+
+        resumeBtnOpen.addEventListener('click', function (e) {
+            e.stopPropagation();
+            toggleContent();
+        });
+
+        document.addEventListener('click', function (e) {
+            const target = e.target,
+                itsMenu =
+                    target == resumeContent || resumeContent.contains(target),
+                itsCloseBtn = target == resumeCloseBtn,
+                menuIsActive = resumeContent.classList.contains('show');
+
+            if ((!itsMenu || itsCloseBtn) && menuIsActive) {
+                resumeContent.classList.remove('show');
+                resumeBtnOpen.classList.remove('hide');
+            }
+        });
+    }
+
     burgerMenu();
+    tubsManager();
+    resumeHundler();
 
     const importanceSlider = new Swiper('.importance__slider', {
         slidesPerView: 1,
@@ -72,4 +137,8 @@ document.addEventListener('DOMContentLoaded', function () {
             onlyInViewport: false,
         },
     });
+
+    Fancybox.bind('#grouped-images-1 a', {});
+
+    Fancybox.bind('#grouped-images-2 a', {});
 });

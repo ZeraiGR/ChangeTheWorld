@@ -16,6 +16,7 @@
 	<meta property="og:image" content="images/preview.jpg">
 
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 
@@ -106,54 +107,56 @@
 					<a class="promo__link button" href="#">Вести за собой</a>
 				</div>
 				<div class="square-decor promo__image">
-					<img src="images/IMG_0152.JPG" alt="children">
+					<img src="images/IMG_0152.JPG" alt="children" data-fancybox="gallery">
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="directions _format">
+	<section class="directions _format _bg-second">
 		<div class="container">
 			<div class="directions__inner">
 				<h2 class="directions__title main-title">
 					Направления наших работ
 				</h2>
-				<ul class="directions__items">
-					<li class="directions__item">
-						<a class="directions__content" href="#">
-							<div class="directions__top-content">
-								<img class="directions__image" src="images/save-forest.jpg" alt="forest">
-								<h3 class="directions__name">
+				<ul class="directions__items universal-items">
+					<li class="universal-item">
+						<a class="universal-item__content" href="#">
+							<div class="universal-item__top-content">
+								<img class="universal-item__image" src="images/save-forest.jpg" alt="forest">
+								<h3 class="universal-item__name">
 									Восстановление лесов
 								</h3>
+								<div class="universal-item__cover"></div>
 							</div>
-							<div class="directions__main-content">
-								<p class="directions__descr">
+							<div class="universal-item__main-content">
+								<p class="universal-item__descr">
 									Доля высокопродуктивных лесных ресурсов в России крайне мала и лесные запасы
 									ежегодно все больше истощаются. Поэтому
 									восстановление лесов – основная задача для их сохранения...
 								</p>
-								<span class="directions__more">
+								<span class="universal-item__more btn-more">
 									Подробнее
 								</span>
 							</div>
 						</a>
 					</li>
-					<li class="directions__item">
-						<a class="directions__content" href="#">
-							<div class="directions__top-content">
-								<img class="directions__image" src="images/help-children.jpg" alt="forest">
-								<h3 class="directions__name">
+					<li class="universal-item">
+						<a class="universal-item__content" href="#">
+							<div class="universal-item__top-content">
+								<img class="universal-item__image" src="images/help-children.jpg" alt="forest">
+								<h3 class="universal-item__name">
 									Помощь детям
 								</h3>
+								<div class="universal-item__cover"></div>
 							</div>
-							<div class="directions__main-content">
-								<p class="directions__descr">
+							<div class="universal-item__main-content">
+								<p class="universal-item__descr">
 									Исследования показали, что наиболее значимые проблемы воспитанников школ-интернатов
 									и детских домов возникают в
 									самостоятельной жизни...
 								</p>
-								<span class="directions__more">
+								<span class="universal-item__more btn-more">
 									Подробнее
 								</span>
 							</div>
@@ -188,10 +191,13 @@
 											детей-сирот
 											получает высшее образование.
 										</p>
-										<a class="importance__link" href="#">Подробнее</a>
+										<a class="importance__link btn-more" href="#">Подробнее</a>
 									</div>
 									<div class="importance__img">
-										<img class="importance__slide-img" src="images/help-child-item.jpg" alt="child">
+										<a class="importance__open" href="images/help-child-item.jpg"
+											data-fancybox="gallery-3">
+											<img class="importance__img" src="images/help-child-item.jpg" alt="images">
+										</a>
 										<p class="importance__slide-descr">
 											<span>87%</span> детей , оставшихся без родителей не находят новую семью
 										</p>
@@ -209,10 +215,12 @@
 											меры и восстанавливать их запасы, но и строго
 											следовать лесным нормам.
 										</p>
-										<a class="importance__link" href="#">Подробнее</a>
+										<a class="importance__link btn-more" href="#">Подробнее</a>
 									</div>
 									<div class="importance__img">
-										<img class="importance__slide-img" src="images/fond-bg.jpg" alt="forest">
+										<a class="importance__open" href="images/fond-bg.jpg" data-fancybox="gallery-3">
+											<img class="importance__img" src="images/fond-bg.jpg" alt="images">
+										</a>
 										<p class="importance__slide-descr">
 											<span>2.5 млн.</span> гектаров леса сгорело в России летом 2019 года
 										</p>
@@ -229,7 +237,7 @@
 		</div>
 	</section>
 
-	<!-- <section class="initiatives">
+	<section class="initiatives _format _bg-second">
 		<div class="container">
 			<div class="initiatives__inner">
 				<h2 class="initiatives__title main-title">
@@ -238,15 +246,15 @@
 				<div class="initiatives__content">
 					<div class="initiatives__info">
 						<div class="initiatives__tabs">
-							<div class="initiatives__tab">
+							<a class="initiatives__tab" href="#" data-tab="1">
 								Помощь детям
-							</div>
-							<div class="initiatives__tab">
+							</a>
+							<a class="initiatives__tab active" href="#" data-tab="2">
 								Восстановление лесов
-							</div>
+							</a>
 						</div>
 						<div class="initiatives__tabs-content">
-							<div class="initiatives__tab-content">
+							<div class="initiatives__tab-content" data-tab-content="1">
 								<p class="initiatives__text">
 									Для гармоничного и полнного развития личности ребёнок должен расти в атмосфере
 									любви, счастья и понимания, которая
@@ -256,11 +264,11 @@
 									лишившийся родителей, не имеет так
 									необходимой ему поддержки, что неизбежно приводит к ряду проблем...
 								</p>
-								<a class="initiatives__more" href="#">
+								<a class="initiatives__more btn-more" href="#">
 									Подробнее
 								</a>
 							</div>
-							<div class="initiatives__tab-content">
+							<div class="initiatives__tab-content active" data-tab-content="2">
 								<p class="initiatives__text">
 									Россия является одним из самых крупных экспортеров древесины на мировом рынке.
 									Поэтому для сохранения и приумножения
@@ -268,36 +276,49 @@
 									восстанавливать их запасы, но и строго
 									следовать лесным нормам...
 								</p>
-								<a class="initiatives__more" href="#">
+								<a class="initiatives__more btn-more" href="#">
 									Подробнее
 								</a>
 							</div>
 						</div>
 					</div>
 					<div class="initiatives__images">
-						<div class="initiatives__images-content">
+						<div id="grouped-images-1" class="initiatives__images-content" data-tab-content="1">
 							<div class="initiatives__images-left">
-								<img class="initiatives__img" src="images/help-children.jpg" alt="images">
+								<a class="initiatives__open" href="images/help-children.jpg" data-fancybox="gallery-1">
+									<img class="initiatives__img" src="images/help-children.jpg" alt="images">
+								</a>
 							</div>
 							<div class="initiatives__images-right">
-								<img class="initiatives__img" src="images/help-child-item.JPG" alt="images">
-								<img class="initiatives__img" src="images/help-child.jpg" alt="images">
+								<a class="initiatives__open" href="images/help-child-item.JPG"
+									data-fancybox="gallery-1">
+									<img class="initiatives__img" src="images/help-child-item.JPG" alt="images">
+								</a>
+								<a class="initiatives__open" href="images/help-child.jpg" data-fancybox="gallery-1">
+									<img class="initiatives__img" src="images/help-child.jpg" alt="images">
+								</a>
 							</div>
 						</div>
-						<div class="initiatives__images-content">
+						<div id="grouped-images-2" class="initiatives__images-content active" data-tab-content="2">
 							<div class="initiatives__images-left">
-								<img class="initiatives__img" src="images/forest-4.png" alt="images">
+								<a class="initiatives__open" href="images/forest-14.jpg" data-fancybox="gallery-2">
+									<img class="initiatives__img" src="images/forest-14.jpg" alt="images">
+								</a>
 							</div>
 							<div class="initiatives__images-right">
-								<img class="initiatives__img" src="images/forest-2.png" alt="images">
-								<img class="initiatives__img" src="images/forest-17.jpg" alt="images">
+								<a class="initiatives__open" href="images/forest-2.png" data-fancybox="gallery-2">
+									<img class="initiatives__img" src="images/forest-2.png" alt="images">
+								</a>
+								<a class="initiatives__open" href="images/forest-17.jpg" data-fancybox="gallery-2">
+									<img class="initiatives__img" src="images/forest-17.jpg" alt="images">
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<footer class="footer">
 		<div class="container">
@@ -391,6 +412,7 @@
 	</footer>
 
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
 
 	<script src="js/common.js"></script>
