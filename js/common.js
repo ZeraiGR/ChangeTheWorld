@@ -117,9 +117,56 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function btnMoreHundler() {
+        const btnMore = document.querySelector('.help-ways__more');
+
+        if (btnMore) {
+            const items = document.querySelectorAll('.help-ways__one');
+            btnMore.addEventListener('click', function openItems() {
+                items.forEach((el) => {
+                    if (!el.classList.contains('help-ways__one--visible')) {
+                        el.classList.add('help-ways__one--visible');
+                    }
+                    btnMore.classList.add('hide');
+                });
+            });
+        }
+    }
+
+    function articleTabs() {
+        const tabs = document.querySelector('.tabs');
+        const tabsBtn = document.querySelectorAll('.tabs__btn');
+        const tabsContent = document.querySelectorAll('.tabs__content');
+
+        if (tabs) {
+            tabs.addEventListener('click', (e) => {
+                if (e.target.classList.contains('tabs__btn')) {
+                    const tabsPath = e.target.dataset.tabsPath;
+                    tabsBtn.forEach((el) => {
+                        el.classList.remove('tabs__btn--active');
+                    });
+                    document
+                        .querySelector(`[data-tabs-path="${tabsPath}"]`)
+                        .classList.add('tabs__btn--active');
+                    tabsHandler(tabsPath);
+                }
+            });
+        }
+
+        const tabsHandler = (path) => {
+            tabsContent.forEach((el) => {
+                el.classList.remove('tabs__content--active');
+            });
+            document
+                .querySelector(`[data-tabs-target="${path}"]`)
+                .classList.add('tabs__content--active');
+        };
+    }
+
     burgerMenu();
     tubsManager();
     resumeHundler();
+    btnMoreHundler();
 
     const importanceSlider = new Swiper('.importance__slider', {
         slidesPerView: 1,
