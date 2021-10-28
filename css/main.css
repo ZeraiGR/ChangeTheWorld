@@ -46,6 +46,10 @@ body {
 	overflow-x: hidden;
 }
 
+body.lock {
+	overflow: hidden;
+}
+
 body,
 h1,
 h2,
@@ -100,6 +104,10 @@ button,
 textarea,
 select {
 	font: inherit;
+}
+
+body.lock .header {
+	background-color: #fff;
 }
 
 .container {
@@ -1086,7 +1094,7 @@ body._pc .header__list > li:hover .header__sub-menu {
 
 .resume {
   position: fixed;
-  z-index: 3;
+  z-index: 12;
   top: 7.5rem;
 }
 
@@ -1264,12 +1272,6 @@ body._pc .header__list > li:hover .header__sub-menu {
 
 /* recovery-ways styles */
 
-.recovery-ways {
-}
-
-.recovery-ways__inner {
-}
-
 .recovery-ways__content-top {
 	margin-bottom: 2.813rem;
 	display: flex;
@@ -1285,89 +1287,135 @@ body._pc .header__list > li:hover .header__sub-menu {
 	margin-bottom: 2rem;
 }
 
-.article-text {
-}
-.recovery-ways__text {
-}
-.recovery-ways__text--first {
-}
-.recovery-ways__items {
-}
-.recovery-ways__item {
-}
-.recovery-ways__item--domestic {
-}
-.recovery-ways__item--network {
-}
-.recovery-ways__item--creative {
-}
-.recovery-ways__heading {
-}
 .recovery-ways__img {
 	max-width: 32.125rem;
 }
-.recovery-ways__tabs {
-}
 
-.recovery-ways__nav {
+.recovery-ways__tabs-list {
 	margin-bottom: 1.875rem;
 	display: flex;
 }
 
-.recovery-ways__tab-nav {
+.recovery-ways__tabs-btn {
 	padding: 0.625rem 1rem;
-	cursor: pointer;
 	background-color: rgba(23, 26, 26, 0.2);
 	border-radius: 0.625rem;
 }
 
-.recovery-ways__tab-nav.active {
-	background-color: var(--accent);
+.recovery-ways__tabs-btn.recovery-ways__tabs-btn--active {
 	color: #fff;
+	background-color: var(--accent);
 }
 
-.recovery-ways__tab-nav + .recovery-ways__tab-nav {
+.recovery-ways__tabs-item + .recovery-ways__tabs-item {
 	margin-left: 1.25rem;
 }
 
-.recovery-ways__tabs-content {
-	
-}
 
-.recovery-ways__tab-content {
+.recovery-ways__tabs-content {
 	margin-bottom: 1rem;
 	display: none;
 }
 
-.recovery-ways__tab-content.active {
+.recovery-ways__tabs-content.recovery-ways__tabs-content--active {
 	display: flex;
 	align-items: center;
 }
 
-.recovery-ways__tab-info {
-}
 .recovery-ways__tab-img {
 	margin-left: 3.438rem;
 	max-width: 32.125rem;
 	height: 23.375rem;
 }
-.recovery-ways__diagram {
-}
+
 .recovery-ways__progress {
+	margin-bottom: 1.25rem;
 }
+
 .recovery-ways__progress-item {
+	position: relative;
+	margin-bottom: 1rem;
+	font-size: 0.8rem;
+	font-weight: 300;
 }
+
+.recovery-ways__progress-item::before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 100%;
+	border-top-right-radius: 0.625rem;
+	border-bottom-right-radius: 0.625rem;
+	content: "";
+}
+
+.recovery-ways__progress-item:last-child {
+	margin-bottom: 0;
+}
+
 .recovery-ways__progress-item--artific {
+	padding-left: 19.75rem;
 }
+
+.recovery-ways__progress-item--artific::before {
+	width: 18.75rem;
+	background-color: #62A6BC;
+}
+
 .recovery-ways__progress-item--combine {
+	padding-left: 8.214rem;
 }
+
+.recovery-ways__progress-item--combine::before {
+	width: 7.214rem;
+	background-color: #FFAB2D;
+}
+
 .recovery-ways__progress-item--natural {
+	padding-left: 8.175rem;
 }
+
+.recovery-ways__progress-item--natural::before {
+	width: 7.175rem;
+	background-color: #7FCA48;
+}
+
 .recovery-ways__descr {
+	margin-bottom: 1rem;
 }
+
 .recovery-ways__descr-item {
+	position: relative;
+	padding-left: 1.25rem;
+	font-size: 0.938rem;
 }
+
+.recovery-ways__descr-item::before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.625rem;
+	height: 0.625rem;
+	border-radius: 50%;
+	content: "";
+}
+
+.recovery-ways__descr-item--artific::before {
+	background-color: #62A6BC;
+}
+
+.recovery-ways__descr-item--combine::before {
+	background-color: #FFAB2D;
+}
+
+.recovery-ways__descr-item--natural::before {
+	background-color: #7FCA48;
+}
+
 .recovery-ways__more {
+	font-size:  0.8rem;
 }
 
 .recovery-ways__bottom-content {
@@ -1377,6 +1425,683 @@ body._pc .header__list > li:hover .header__sub-menu {
 
 .recovery-ways__bottom-content p {
 	margin: 0;
+}
+
+.popup__info .recovery-ways__popup-image,
+.popup__info .forest-importance__popup-image {
+	margin: 3.125rem auto;
+}
+
+/* forest-importance styles */
+
+.forest-importance__top-content {
+	margin-bottom: 2.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.forest-importance__image {
+	margin-right: 3.438rem;
+	max-width: 34.375rem;
+}
+
+.forest-importance__text--first {
+	max-width: 34.375rem;
+	font-size: 1.25rem;
+}
+
+.forest-importance__clarification {
+	display: block;
+	margin-bottom: 0.8rem;
+	font-size: 0.8rem;
+}
+
+.forest-importance__diagram-content {
+	margin-bottom: 1rem;
+	display: flex;
+	font-size: 0.938rem;
+}
+
+.forest-importance__diagram-graph {
+	max-width: 34.375rem;
+	width: 100%;
+}
+
+.forest-importance__graph-item {
+	position: relative;
+	margin-bottom: 0.938rem;
+	line-height: 1rem;
+	font-size: 0.8rem;
+	font-weight: 300;
+}
+
+.forest-importance__graph-item::before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 100%;
+	border-top-right-radius: 0.625rem;
+	border-bottom-right-radius: 0.625rem;
+	content: "";
+}
+
+.forest-importance__graph-item--canada {
+	padding-left: 31.875rem;
+}
+
+.forest-importance__graph-item--canada::before {
+	width: 31.25rem;
+	background-color: #7FCA48;
+}
+
+.forest-importance__graph-item--russia {
+	padding-left: 19.75rem;
+}
+
+.forest-importance__graph-item--russia::before {
+	width: 19.125rem;
+	background-color: #62A6BC;
+}
+
+.forest-importance__graph-item--ocean {
+	padding-left: 18.938rem;
+}
+
+.forest-importance__graph-item--ocean::before {
+	width: 18.313rem;
+	background-color: #B42DE3;
+}
+
+.forest-importance__graph-item--brazil {
+	padding-left: 9.688rem;
+}
+
+.forest-importance__graph-item--brazil::before {
+	width: 9.063rem;
+	background-color: #A36227;
+}
+
+.forest-importance__graph-item--southAmerica {
+	padding-left: 8.125rem;
+}
+
+.forest-importance__graph-item--southAmerica::before {
+	width: 7.5rem;
+	background-color: #FFAB2D;
+}
+
+.forest-importance__graph-item--centralAmerica {
+	padding-left: 5rem;
+}
+
+.forest-importance__graph-item--centralAmerica::before {
+	width: 4.375rem;
+	background-color: #AA4203;
+}
+
+.forest-importance__graph-item--usa {
+	padding-left: 3.875rem;
+}
+
+.forest-importance__graph-item--usa::before {
+	width: 3.25rem;
+	background-color: #B5B5B5;
+}
+
+.forest-importance__graph-item--africa {
+	padding-left: 2.875rem;
+}
+
+.forest-importance__graph-item--africa::before {
+	width: 2.25rem;
+	background-color: #2DEFA9;
+}
+
+.forest-importance__graph-item--allWorld {
+	padding-left: 2.625rem;
+}
+
+.forest-importance__graph-item--allWorld::before {
+	width: 2rem;
+	background-color: #454545;
+}
+
+.forest-importance__graph-item--china {
+	padding-left: 1.138rem;
+}
+
+.forest-importance__graph-item--china::before {
+	width: 0.513rem;
+	background-color: #FFA4A4;
+}
+
+.forest-importance__graph-item--asia {
+	padding-left: 1.106rem;
+}
+
+.forest-importance__graph-item--asia::before {
+	width: 0.481rem;
+	background-color: #31DAFF;
+}
+
+.forest-importance__graph-item:last-child {
+	margin-bottom: 0;
+}
+
+.forest-importance__diagram-descr {
+	margin-left: 3.438rem;
+}
+
+.forest-importance__descr-item {
+	position: relative;
+	margin-bottom: 0.938rem;
+	padding-left: 1.25rem;
+	line-height: 1rem;
+}
+
+.forest-importance__descr-item::before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.625rem;
+	height: 0.625rem;
+	border-radius: 50%;
+	content: "";
+}
+
+.forest-importance__descr-item--canada::before {
+	background-color: #7FCA48;
+}
+
+.forest-importance__descr-item--russia::before {
+	background-color: #62A6BC;
+}
+
+.forest-importance__descr-item--ocean::before {
+	background-color: #B42DE3;
+}
+
+.forest-importance__descr-item--brazil::before {
+	background-color: #A36227;
+}
+
+.forest-importance__descr-item--southAmerica::before {
+	background-color: #FFAB2D;
+}
+
+.forest-importance__descr-item--centralAmerica::before {
+	background-color: #AA4203;
+}
+
+.forest-importance__descr-item--usa::before {
+	background-color: #B5B5B5;
+}
+
+.forest-importance__descr-item--africa::before {
+	background-color: #2DEFA9;
+}
+
+.forest-importance__descr-item--allWorld::before {
+	background-color: #454545;
+}
+
+.forest-importance__descr-item--china::before {
+	background-color: #FFA4A4;
+}
+
+.forest-importance__descr-item--asia::before {
+	background-color: #31DAFF;
+}
+
+.forest-importance__descr-item:last-child {
+	margin-bottom: 0;
+}
+
+.forest-importance__diagram-more {
+	font-size: 0.8rem;
+}
+
+/* forest-history styles */
+
+.forest-history__inner {
+	display: flex;
+	align-items: center;
+}
+
+.forest-history__image {
+	margin-left: 3.438rem;
+	max-width: 32.125rem;
+}
+
+.forest-history__more {
+	font-size: 0.8rem;
+}
+
+/* who-save */
+
+.who-save__content-item {
+	margin-bottom: 2.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.who-save__content-item:nth-child(odd) .who-save__img {
+	margin-right: 3.438rem;
+}
+
+.who-save__content-item:nth-child(even) .who-save__img  {
+	margin-left: 3.438rem;
+	max-width: 32.125rem;
+}
+
+.who-save__img {
+	
+	max-width: 34.375rem;
+}
+
+.who-save__more {
+	font-size: 0.8rem;
+}
+
+/* how-save */
+
+.how-save__popup-diagram__inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.how-save__content-item {
+	display: flex;
+}
+
+.how-save__img {
+	margin-left: 3.438rem;
+	max-width: 32.125rem;
+}
+
+.how-save__popup-item::before {
+	height: 1.5rem;
+}
+
+.how-save__more {
+	font-size: 0.8rem;
+}
+
+.how-save__popup-diagram {
+	margin: 3.125rem 0;
+	padding: 2.5rem;
+}
+
+.how-save__popup-diagram-title {
+	margin-bottom: 1rem;
+	max-width: 32.125rem;
+	font-size: 0.938rem;;
+	font-weight: 500;
+}
+
+.how-save__popup-diagram-clarification {
+	position: relative;
+	margin-bottom: 1rem;
+	padding-left: 1.25rem;
+	display: block;
+	font-size: 0.8rem;
+}
+
+.how-save__popup-diagram-clarification::before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.625rem;
+	height: 0.625rem;
+	background-color: #588302;
+	border-radius: 50%;
+	content: "";
+}
+
+.how-save__popup-diagram-content {
+	display: flex;
+}
+
+.how-save__popup-graph {
+	max-width: 34.375rem;
+	width: 100%;
+}
+
+.how-save__popup-graph-item {
+	position: relative;
+	margin-bottom: 0.938rem;
+	font-size: 0.8rem;
+	line-height: 1rem;
+	font-weight: 300;
+}
+
+.how-save__popup-graph-item:last-child {
+	margin-bottom: 0;
+}
+
+.how-save__popup-graph-item::before,
+.how-save__popup-graph-item::after {
+	position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+    content: "";
+}
+
+.how-save__popup-graph-item--tatarstan {
+	padding-left: 27.563rem;
+}
+
+.how-save__popup-graph-item--tatarstan::before {
+	width: 26.938rem;
+	background-color: #588302;
+}
+
+.how-save__popup-graph-item--tatarstan::after {
+	width: 24rem;
+	background-color: #EB5757;
+	z-index: 2;
+}
+
+.how-save__popup-graph-item--chukotka {
+	padding-left: 22.75rem;
+}
+
+.how-save__popup-graph-item--chukotka::before {
+	width: 3.875rem;
+	background-color: #588302;
+	z-index: 2;
+}
+
+.how-save__popup-graph-item--chukotka::after {
+	width: 22.125rem;
+	background-color: #F2994A;
+}
+
+.how-save__popup-graph-item--uliyanovsk {
+	padding-left: 14.375rem;
+}
+
+.how-save__popup-graph-item--uliyanovsk::before {
+	width: 13.75rem;
+	background-color: #588302;
+	
+}
+
+.how-save__popup-graph-item--uliyanovsk::after {
+	width: 12.375rem;
+	background-color: #BB6BD9;
+	z-index: 2;
+}
+
+.how-save__popup-graph-item--volgograd {
+	padding-left: 12.313rem;
+}
+
+.how-save__popup-graph-item--volgograd::before {
+	width: 11.688rem;
+	background-color: #588302;
+	
+}
+
+.how-save__popup-graph-item--volgograd::after {
+	width: 10.813rem;
+	background-color: #4F4F4F;
+	z-index: 2;
+}
+
+.how-save__popup-graph-item--tambov {
+	padding-left: 11.438rem;
+}
+
+.how-save__popup-graph-item--tambov::before {
+	width: 10.313rem;
+	background-color: #588302;
+	z-index: 2;
+}
+
+.how-save__popup-graph-item--tambov::after {
+	width: 10.813rem;
+	background-color: #A36227;
+}
+
+.how-save__popup-graph-item--orenburg {
+	padding-left: 9.875rem;
+}
+
+.how-save__popup-graph-item--orenburg::before {
+	width: 8.75rem;
+	background-color: #588302;
+		z-index: 2;
+}
+
+.how-save__popup-graph-item--orenburg::after {
+	width: 9.25rem;
+	background-color: #6FCF97;
+}
+
+.how-save__popup-graph-item--lipetsk {
+	padding-left: 7.875rem;
+}
+
+.how-save__popup-graph-item--lipetsk::before {
+	width: 6.563rem;
+	background-color: #588302;
+	z-index: 2;
+}
+
+.how-save__popup-graph-item--lipetsk::after {
+	width: 7.25rem;
+	background-color: #56CCF2;
+}
+
+.how-save__popup-graph-item--belgorod {
+	padding-left: 5.938rem;
+}
+
+.how-save__popup-graph-item--belgorod::before {
+	width: 4.625rem;
+	background-color: #588302;
+	z-index: 2;
+}
+
+.how-save__popup-graph-item--belgorod::after {
+	width: 5.313rem;
+	background-color: #AA4203;
+}
+
+.how-save__popup-descr-item {
+	position: relative;
+	margin-bottom: 0.938rem;
+	padding-left: 1.25rem;
+	font-size: 0.8rem;
+	line-height: 1rem;
+}
+
+.how-save__popup-descr-item:last-child {
+	margin-bottom: 0;
+}
+
+.how-save__popup-descr-item::before {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 0.635rem;
+	height: 0.635rem;
+	border-radius: 50%;
+	content: "";
+}
+
+.how-save__popup-descr-item--tatarstan::before {
+	background-color: #EB5757;
+}
+
+.how-save__popup-descr-item--chukotka::before {
+	background-color: #F2994A;
+}
+
+.how-save__popup-descr-item--uliyanovsk::before {
+	background-color: #BB6BD9;
+}
+
+.how-save__popup-descr-item--volgograd::before {
+	background-color: #4F4F4F;
+}
+
+.how-save__popup-descr-item--tambov::before {
+	background-color: #A36227;
+}
+
+.how-save__popup-descr-item--orenburg::before {
+	background-color: #6FCF97;
+}
+
+.how-save__popup-descr-item--lipetsk::before {
+	background-color: #56CCF2;
+}
+
+.how-save__popup-descr-item--belgorod::before {
+	background-color: #AA4203;
+}
+
+/* how-prepare styles */
+
+.how-prepare__content-item {
+	display: flex;
+	align-items: center;
+}
+
+.how-prepare__img {
+	max-width: 34.375rem;
+	margin-right: 3.438rem;
+}
+
+/* how-we-work styles */
+
+.how-we-work__content-item {
+	margin-bottom: 3.438rem;
+	display: flex;
+	align-items: center;
+}
+
+.how-we-work__content-item:nth-child(odd) .how-we-work__img {
+	margin-left: 3.438rem;
+	max-width: 32.125rem;
+}
+
+.how-we-work__content-item:nth-child(even) .how-we-work__img {
+	margin-right: 3.438rem;
+	max-width: 34.375rem;
+}
+
+.how-we-work__link {
+	font-size: 0.8rem;
+}
+
+/* general popup styles */
+
+.popup {
+	position: fixed;
+	z-index: 11;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 7.5rem;
+	left: 0;
+	padding-top: 4.375rem;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup.open .popup__content {
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.popup__content {
+	background-color: #fff;
+	color:#000;
+	max-width: 71.25rem;
+	width: 100%;
+	padding: 2rem 0 8rem;
+	border-radius: 0.625rem;
+	position: relative;
+	transform: translate(0px, -100%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.popup__container {
+	max-width: 46.25rem;
+	margin: 0 auto;
+}
+
+.popup__close {
+	position: absolute;
+	right: 2.5rem;
+	top: 2.5rem;
+}
+
+.popup__close-icon {
+	width: 1.563rem;
+	height: 1.563rem;
+	fill: #9e9e9e;
+	transition: fill 0.3s;
+}
+
+.popup__close-icon:hover {
+	fill: #000;
+	transition: fill 0.3s;
+}
+
+.popup__title {
+	font-size: 40px;
+	margin: 0px 0px 1em 0px;
+}
+
+.popup__info img {
+	margin: 3.125rem 0;
+}
+
+.popup-banner {
+	margin: 3.125rem 0;
+	padding: 7rem 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.popup-banner__content {
+	max-width: 46.25rem;
+	margin: 0 auto;
+}
+
+.popup-banner__quote {
+	margin-bottom: 3.125rem;
+	font-size: 1.5rem;
+	color: #fff;
 }
 
 /* peculiarities styles */

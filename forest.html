@@ -24,7 +24,7 @@
 
 <body>
 
-	<header class="header">
+	<header class="header lock-padding">
 		<div class="container">
 			<div class="header__inner">
 				<a class="logo logo--header" href="#">
@@ -238,124 +238,124 @@
 			<div class="recovery-ways__tabs">
 				<ul class="recovery-ways__tabs-list">
 					<li class="recovery-ways__tabs-item">
-						Естественный
+						<button class="recovery-ways__tabs-btn" data-tabs-path="natural">Естественный</button>
 					</li>
-					<li class="recovery-ways__tabs-item recovery-ways__tabs-item--active">
-						<button class="recovery-ways__tabs-btn" data-tabs-path="artificial">Искусственный</button>
+					<li class="recovery-ways__tabs-item">
+						<button class="recovery-ways__tabs-btn recovery-ways__tabs-btn--active"
+							data-tabs-path="artificial">Искусственный</button>
 					</li>
-					<li class="recovery-ways__tab-item">
-						Комбинированный
+					<li class="recovery-ways__tabs-item">
+						<button class="recovery-ways__tabs-btn" data-tabs-path="combine">Комбинированный</button>
 					</li>
 				</ul>
-				<div class="recovery-ways__tabs-content">
-					<div class="recovery-ways__tab-content">
-						<div class="recovery-ways__tab-info">
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								Такой метод применяется в основном в тайге и на территориях, где смена главных (ценных)
-								пород культур маловероятна.
-							</p>
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								Естественный способ лесовосстановления применим, если имеется необходимое количество
-								жизнеспособного подроста после
-								рубки. Однако даже такая технология используется параллельно с комплексными
-								лесовосстановительными работами.
-							</p>
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								Для лучшего и более быстрого восстановления леса после рубки оставляются подросты
-								семенных культур и почва
-								минерализуется.
-							</p>
-						</div>
-						<img class="recovery-ways__tab-img" src="images/forest-4.png" alt="images">
+				<div class="recovery-ways__tabs-content" data-tabs-target="natural">
+					<div class="recovery-ways__tab-info">
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							Такой метод применяется в основном в тайге и на территориях, где смена главных (ценных)
+							пород культур маловероятна.
+						</p>
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							Естественный способ лесовосстановления применим, если имеется необходимое количество
+							жизнеспособного подроста после
+							рубки. Однако даже такая технология используется параллельно с комплексными
+							лесовосстановительными работами.
+						</p>
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							Для лучшего и более быстрого восстановления леса после рубки оставляются подросты
+							семенных культур и почва
+							минерализуется.
+						</p>
 					</div>
-					<div class="recovery-ways__tab-content active">
-						<div class="recovery-ways__tab-info">
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								При невозможности естественного восстановления насаждений или на небольших участках
-								применяется <strong>искусственный метод
-									восстановления</strong>.
-								При этом подбирается главная порода и сопутствующие культуры, причем стоит учитывать их
-								совместимость друг с другом.
-							</p>
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								Мы в <strong>«Изменим мир»</strong> применяем только качественные посадочные материалы
-								для
-								лесовосстановления. В нашей работе по
-								восстановлению лесов принимают участие волонтеры, в команду которых <strong>может
-									записаться
-									каждый
-									желающий.</strong>
-							</p>
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								На пустырях механизированной техникой наши специалисты выравнивают почву, параллельно
-								удаляя
-								все сорняки, мусор и
-								излишки грунта. Если местность болотистая или будущий лесной участок будет находиться в
-								низине, то проводятся
-								мелиоративные мероприятия, создается дренаж и подвозится почва.
-							</p>
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								Далее осуществляется геотопосъемка и на основании будущих условий произрастания
-								составляется
-								подробный дендрологический
-								план. На выбор мы предлагаем качественные семена культур или привозим готовые насаждения
-								из
-								лучших питомников. В
-								процессе работ мы сотрудничаем с региональными властями и местными специалистами в сфере
-								выращивания растений.
-							</p>
-						</div>
-						<img class="recovery-ways__tab-img" src="images/forest-3.png" alt="images">
+					<img class="recovery-ways__tab-img" src="images/forest-4.png" alt="images">
+				</div>
+				<div class="recovery-ways__tabs-content recovery-ways__tabs-content--active"
+					data-tabs-target="artificial">
+					<div class="recovery-ways__tab-info">
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							При невозможности естественного восстановления насаждений или на небольших участках
+							применяется <strong>искусственный метод
+								восстановления</strong>.
+							При этом подбирается главная порода и сопутствующие культуры, причем стоит учитывать их
+							совместимость друг с другом.
+						</p>
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							Мы в <strong>«Изменим мир»</strong> применяем только качественные посадочные материалы
+							для
+							лесовосстановления. В нашей работе по
+							восстановлению лесов принимают участие волонтеры, в команду которых <strong>может
+								записаться
+								каждый
+								желающий.</strong>
+						</p>
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							На пустырях механизированной техникой наши специалисты выравнивают почву, параллельно
+							удаляя
+							все сорняки, мусор и
+							излишки грунта. Если местность болотистая или будущий лесной участок будет находиться в
+							низине, то проводятся
+							мелиоративные мероприятия, создается дренаж и подвозится почва.
+						</p>
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							Далее осуществляется геотопосъемка и на основании будущих условий произрастания
+							составляется
+							подробный дендрологический
+							план. На выбор мы предлагаем качественные семена культур или привозим готовые насаждения
+							из
+							лучших питомников. В
+							процессе работ мы сотрудничаем с региональными властями и местными специалистами в сфере
+							выращивания растений.
+						</p>
 					</div>
-					<div class="recovery-ways__tab-content">
-						<div class="recovery-ways__tab-info">
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								В случае невозможности восстановления ценных пород естественным путем применяется
-								комбинированное лесовосстановление.
-								Такой способ является более простым и менее затратным, нежели искусственное
-								восстановление лесного покрова.
-							</p>
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								Кроме того, комбинированное восстановление лесов можно осуществлять на волоках или
-								погрузочных площадках.
-							</p>
-							<p class="article-text recovery-ways__text recovery-ways__text--first">
-								Сравнение затрат при искусственном, естественном и комбинированном
-								лесовосстановлении, руб./га
-							</p>
-							<div class="recovery-ways__diagram">
-								<div class="recovery-ways__progress">
-									<div class="recovery-ways__progress-item recovery-ways__progress-item--artific">
-										6438р за 1 гектар
-									</div>
-									<div class="recovery-ways__progress-item recovery-ways__progress-item--combine">
-										2477р за 1 гектар
-									</div>
-									<div class="recovery-ways__progress-item recovery-ways__progress-item--natural">
-										2464р за 1 гектар
-									</div>
+					<img class="recovery-ways__tab-img" src="images/forest-3.png" alt="images">
+				</div>
+				<div class="recovery-ways__tabs-content" data-tabs-target="combine">
+					<div class="recovery-ways__tab-info">
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							В случае невозможности восстановления ценных пород естественным путем применяется
+							<strong>комбинированное лесовосстановление</strong>.
+							Такой способ является более простым и менее затратным, нежели искусственное
+							восстановление лесного покрова.
+						</p>
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							Кроме того, комбинированное восстановление лесов можно осуществлять на волоках или
+							погрузочных площадках.
+						</p>
+						<p class="article-text recovery-ways__text recovery-ways__text--first">
+							Сравнение затрат при искусственном, естественном и комбинированном
+							лесовосстановлении, руб./га
+						</p>
+						<div class="recovery-ways__diagram">
+							<div class="recovery-ways__progress">
+								<div class="recovery-ways__progress-item recovery-ways__progress-item--artific">
+									6438р за 1 гектар
 								</div>
-								<div class="recovery-ways__descr">
-									<div class="recovery-ways__descr-item">
-										Искусственное лесовосстановление
-									</div>
-									<div class="recovery-ways__descr-item">
-										Комбинированное лесовосстановление
-									</div>
-									<div class="recovery-ways__descr-item">
-										Естественное лесовосстановление
-									</div>
+								<div class="recovery-ways__progress-item recovery-ways__progress-item--combine">
+									2477р за 1 гектар
+								</div>
+								<div class="recovery-ways__progress-item recovery-ways__progress-item--natural">
+									2464р за 1 гектар
 								</div>
 							</div>
-							<a class="recovery-ways__more" href="#">
-								Подробная таблица
-							</a>
+							<div class="recovery-ways__descr">
+								<div class="recovery-ways__descr-item recovery-ways__descr-item--artific">
+									Искусственное лесовосстановление
+								</div>
+								<div class="recovery-ways__descr-item recovery-ways__descr-item--combine">
+									Комбинированное лесовосстановление
+								</div>
+								<div class="recovery-ways__descr-item recovery-ways__descr-item--natural">
+									Естественное лесовосстановление
+								</div>
+							</div>
 						</div>
-						<img class="recovery-ways__tab-img" src="images/forest-5.jpg" alt="images">
+						<a class="recovery-ways__more btn-more popup-link" href="#comparative-table">
+							Подробная таблица
+						</a>
 					</div>
+					<img class="recovery-ways__tab-img" src="images/forest-4.png" alt="images">
 				</div>
 			</div>
-			<div class="recovery-ways__bottom-content">
+			<div class="recovery-ways__bottom-content" data-tabs-target="combine">
 				<p class="article-text recovery-ways__text">
 					<strong>Основными проблемами</strong> лесовосстановления являются низкое качество лесовозобновления
 					и нарушение
@@ -369,6 +369,22 @@
 					условий произрастания насаждений, состава грунта и многих других параметров.
 
 				</p>
+			</div>
+		</div>
+		<div id="comparative-table" class="popup recovery-ways__popup">
+			<div class="popup__body recovery-ways__popup-bofy">
+				<div class="popup__content recovery-ways__popup-content">
+					<a href="" class="popup__close close-popup">
+						<svg class="icon popup__close-icon">
+							<use xlink:href="images/icons/sprite.svg#icon-close-green"></use>
+						</svg>
+					</a>
+
+					<div class="popup__title "></div>
+					<div class="popup__info recovery-ways__popup-info">
+						<img class="recovery-ways__popup-image" src="images/comparing-graph.png" alt="images">
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -476,10 +492,10 @@
 								Азия
 							</div>
 						</div>
-						<a class="forest-importance__diagram-more popup-link" href="#">
-							Подробная таблица
-						</a>
 					</div>
+					<a class="forest-importance__diagram-more btn-more popup-link" href="#rating-table">
+						Подробная таблица
+					</a>
 				</div>
 				<div class="forest-importance__bottom-content">
 					<p class="article-text forest-importance__text">
@@ -503,6 +519,22 @@
 						ежегодно все больше
 						истощаются. Поэтому восстановление лесов – основная задача для их сохранения и увеличения.
 					</p>
+				</div>
+			</div>
+		</div>
+		<div id="rating-table" class="popup forest-importance__popup">
+			<div class="popup__body forest-importance__popup-bofy">
+				<div class="popup__content forest-importance__popup-content">
+					<a href="" class="popup__close close-popup">
+						<svg class="icon popup__close-icon">
+							<use xlink:href="images/icons/sprite.svg#icon-close-green"></use>
+						</svg>
+					</a>
+
+					<div class="popup__title "></div>
+					<div class="popup__info forest-importance__popup-info">
+						<img class="forest-importance__popup-image" src="images/rating-table.png" alt="images">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -538,113 +570,159 @@
 						восстановительные своевременные меры по
 						восполнению лесных богатств.
 					</p>
-					<a class="forest-history__more popup-link" href="#">
+					<a class="forest-history__more btn-more popup-link" href="#history-popup">
 						Читать польностью
 					</a>
 				</div>
 				<img class="forest-history__image" src="images/forest-7.jpg" alt="image">
 			</div>
 		</div>
-		<div class="forest-history__popup popup">
-			<div class="popup-container">
-				<h2 class="forest-history__popup-title title">
-					История лесовосстановления
-				</h2>
-				<p class="forest-history__popup-text article-text">
-					Рассматривая лесопользование и лесовосстановление за 100 лет, а это возраст спелости сосны
-					обыкновенной, можно увидеть,
-					что картина не радует. В царские годы и при Советской власти вид и объемы вырубки не соответствовали
-					допустимым нормам
-					для естественного восстановления лесов.
-				</p>
-				<p class="forest-history__popup-text article-text">
-					По экспертным данным в Поволжье и Центрально-Черноземной зоне переруб составлял от 60%, на
-					Юго-Востоке страны нормы
-					вырубки превышали нормативы в 3,5 раза. Причем леса считались даровым благом и лесовосстановление
-					практически не
-					производилось. Вследствие этого леса начали истощаться и деградировать.
-				</p>
-				<p class="forest-history__popup-text article-text">
-					И только с 1948 года восстановлению лесов начали уделять внимание. Именно период с 1948 по 1980 годы
-					экспертами признан
-					расцветом лесного хозяйства. Несмотря на повышенные нормы вырубки и вывоза леса из страны, были
-					разработаны и внедрены
-					нормативно-правовые акты по лесопользованию, и как следствие, ответственность за восстановительные
-					своевременные меры по
-					восполнению лесных богатств.
-				</p>
-				<img class="forest-history__popup-img popup-img" src="images/forest-8.jpg" alt="image">
-				<p class="forest-history__popup-text article-text">
-					Однако этот период длился недолго и уже с 80-х годов деградация лесов продолжилась. Многие эксперты
-					выражаются так:
-					«Наши предыдущие поколения брали у нас лесные богатства взаймы, теперь мы берем их взаймы у наших
-					детей и внуков, хотя
-					сейчас мирное время».
-				</p>
-				<p class="forest-history__popup-text article-text">
-					Зарубежный опыт показывает, что частное и корпоративное владение лесными угодьями положительно
-					повлияло на лесное
-					хозяйство и качество лесов.
-				</p>
-				<p class="forest-history__popup-text article-text">
-					В России этот опыт негативно отразился на природных ресурсах. Поэтому, даже после введения
-					законопроектов, разрешающих
-					владение лесными участками, существуют немалые риски повторения отрицательной динамики.
-				</p>
-				<p class="forest-history__popup-text article-text">
-					Кроме того, принятый в 2006 году Лесной кодекс даже не содержит термин «лес». Он разрушил старую
-					систему управления
-					лесами, но не предложил новую политику.
-				</p>
-			</div>
-			<div class="popup-banner">
-				<p class="popup-banner__quote">
-					«Мы верим, что маленькие шаги каждого человека могут превратиться в большой шаг для человечества,
-					который нужен, чтобы
-					спасти нашу прекрасную Планету!»
-				</p>
-				<a class="button" href="#">
-					Сделать свой шаг
-				</a>
-			</div>
-			<div class="popup-container">
-				<p class="forest-history__popup-text article-text">
-					Еще одной проблемой в лесовосстановлении служит то, что после модернизации и продажи перспективных
-					сельскохозяйственных
-					предприятий в России не хватает системных крупных игроков, которые бы поддерживали и контролировали
-					состояние лесных
-					ресурсов.
-				</p>
-				<p class="forest-history__popup-text article-text">
-					Не хватает грамотных специалистов главных и смежных профессий. Да, ежегодно выпускаются тысячи
-					агрономов и прочих
-					выпускников, однако рабочих мест нет – их количество сократилось в четыре раза.
-				</p>
-				<p class="forest-history__popup-text article-text">
-					Ну и кроме всего перечисленного, а также главных противников лесов (пожары, вредители, болезни и
-					климатические условия)
-					существуют еще «черные» лесорубы. Поэтому отказ от лесников добавил проблем лесному хозяйству.
-					Многие эксперты сходятся
-					во мнении, что лесников необходимо вернуть.
-				</p>
-				<img class="forest-history__popup-img popup-img" src="images/forestman.png" alt="image">
-				<p class="forest-history__popup-text article-text">
-					По данным Рослесхоза на 2017 год восстановлено 968 тысяч га, тогда как вырублено почти 98 миллионов
-					гектар. Более свежие
-					данные не предоставляются.
-				</p>
-				<p class="forest-history__popup-text article-text">
-					За все этот же 2017 год было заготовлено 212,4 млн. кубометров древесины. Хотя в России имеется
-					76,29 млн. га
-					неиспользуемых сельхозземель, которые можно засадить лесом. Это около 4,5% от всей площади России
-					или чуть больше
-					площади Аргентины.
-				</p>
-				<p class="forest-history__popup-text article-text">
-					Посадка леса на этой территории позволит не только получить дополнительные 282, 237 млн. кубометров
-					древесины в год, но
-					и существенно снизить кислородное голодание в рядом расположенных городах.
-				</p>
+		<div id="history-popup" class="popup forest-history__popup">
+			<div class="popup__body forest-history__popup-bofy">
+				<div class="popup__content forest-history__popup-content">
+					<a href="" class="popup__close close-popup">
+						<svg class="icon popup__close-icon">
+							<use xlink:href="images/icons/sprite.svg#icon-close-green"></use>
+						</svg>
+					</a>
+
+					<div class="popup__title "></div>
+					<div class="popup__info forest-history__popup-info">
+						<div class="popup__container">
+							<h2 class="forest-history__popup-title title">
+								История лесовосстановления
+							</h2>
+							<p class="forest-history__popup-text article-text">
+								Рассматривая лесопользование и лесовосстановление за 100 лет, а это возраст спелости
+								сосны
+								обыкновенной, можно увидеть,
+								что картина не радует. В царские годы и при Советской власти вид и объемы вырубки не
+								соответствовали
+								допустимым нормам
+								для естественного восстановления лесов.
+							</p>
+							<p class="forest-history__popup-text article-text">
+								По экспертным данным в Поволжье и Центрально-Черноземной зоне переруб составлял от 60%,
+								на
+								Юго-Востоке страны нормы
+								вырубки превышали нормативы в 3,5 раза. Причем леса считались даровым благом и
+								лесовосстановление
+								практически не
+								производилось. Вследствие этого леса начали истощаться и деградировать.
+							</p>
+							<p class="forest-history__popup-text article-text">
+								И только с 1948 года восстановлению лесов начали уделять внимание. Именно период с 1948
+								по
+								1980 годы
+								экспертами признан
+								расцветом лесного хозяйства. Несмотря на повышенные нормы вырубки и вывоза леса из
+								страны,
+								были
+								разработаны и внедрены
+								нормативно-правовые акты по лесопользованию, и как следствие, ответственность за
+								восстановительные
+								своевременные меры по
+								восполнению лесных богатств.
+							</p>
+							<img class="forest-history__popup-img popup-img" src="images/forest-8.jpg" alt="image">
+							<p class="forest-history__popup-text article-text">
+								Однако этот период длился недолго и уже с 80-х годов деградация лесов продолжилась.
+								Многие
+								эксперты
+								выражаются так:
+								«Наши предыдущие поколения брали у нас лесные богатства взаймы, теперь мы берем их
+								взаймы у
+								наших
+								детей и внуков, хотя
+								сейчас мирное время».
+							</p>
+							<p class="forest-history__popup-text article-text">
+								Зарубежный опыт показывает, что частное и корпоративное владение лесными угодьями
+								положительно
+								повлияло на лесное
+								хозяйство и качество лесов.
+							</p>
+							<p class="forest-history__popup-text article-text">
+								В России этот опыт негативно отразился на природных ресурсах. Поэтому, даже после
+								введения
+								законопроектов, разрешающих
+								владение лесными участками, существуют немалые риски повторения отрицательной динамики.
+							</p>
+							<p class="forest-history__popup-text article-text">
+								Кроме того, принятый в 2006 году Лесной кодекс даже не содержит термин «лес». Он
+								разрушил
+								старую
+								систему управления
+								лесами, но не предложил новую политику.
+							</p>
+						</div>
+						<div class="popup-banner" style="background-image: url('images/banner-bg.jpg');">
+							<div class="popup-banner__content">
+								<p class="popup-banner__quote">
+									«Мы верим, что маленькие шаги каждого человека могут превратиться в большой шаг
+									для
+									человечества,
+									который нужен, чтобы
+									спасти нашу прекрасную Планету!»
+								</p>
+								<a class="button" href="#">
+									Сделать свой шаг
+								</a>
+							</div>
+						</div>
+						<div class="popup__container">
+							<p class="forest-history__popup-text article-text">
+								Еще одной проблемой в лесовосстановлении служит то, что после модернизации и продажи
+								перспективных
+								сельскохозяйственных
+								предприятий в России не хватает системных крупных игроков, которые бы поддерживали и
+								контролировали
+								состояние лесных
+								ресурсов.
+							</p>
+							<p class="forest-history__popup-text article-text">
+								Не хватает грамотных специалистов главных и смежных профессий. Да, ежегодно выпускаются
+								тысячи
+								агрономов и прочих
+								выпускников, однако рабочих мест нет – их количество сократилось в четыре раза.
+							</p>
+							<p class="forest-history__popup-text article-text">
+								Ну и кроме всего перечисленного, а также главных противников лесов (пожары, вредители,
+								болезни и
+								климатические условия)
+								существуют еще «черные» лесорубы. Поэтому отказ от лесников добавил проблем лесному
+								хозяйству.
+								Многие эксперты сходятся
+								во мнении, что лесников необходимо вернуть.
+							</p>
+							<img class="forest-history__popup-img popup-img" src="images/forestman.png" alt="image">
+							<p class="forest-history__popup-text article-text">
+								По данным Рослесхоза на 2017 год восстановлено 968 тысяч га, тогда как вырублено почти
+								98
+								миллионов
+								гектар. Более свежие
+								данные не предоставляются.
+							</p>
+							<p class="forest-history__popup-text article-text">
+								За все этот же 2017 год было заготовлено 212,4 млн. кубометров древесины. Хотя в России
+								имеется
+								76,29 млн. га
+								неиспользуемых сельхозземель, которые можно засадить лесом. Это около 4,5% от всей
+								площади
+								России
+								или чуть больше
+								площади Аргентины.
+							</p>
+							<p class="forest-history__popup-text article-text">
+								Посадка леса на этой территории позволит не только получить дополнительные 282, 237 млн.
+								кубометров
+								древесины в год, но
+								и существенно снизить кислородное голодание в рядом расположенных городах.
+							</p>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</section>
@@ -653,7 +731,7 @@
 		<div class="container">
 			<div class="who-save__inner">
 				<div class="who-save__content-item">
-					<img class="ho-save__img" src="images/forest-10.png" alt="images">
+					<img class="who-save__img" src="images/forest-10.png" alt="images">
 					<div class="who-save__info">
 						<h2 class="who-save__title title">
 							Кто в России занимается восстановлением лесов
@@ -687,11 +765,138 @@
 							России засаживается 1 млн.
 							га. Однако в реальности эти цифры к лесовосстановлению не имеют никакого отношения...
 						</p>
-						<a class="who-save__more" href="#">
+						<a class="who-save__more btn-more popup-link" href="#who-save-popup">
 							Читать польностью
 						</a>
 					</div>
 					<img class="who-save__img" src="images/forest-11.jpg" alt="images">
+				</div>
+			</div>
+		</div>
+		<div id="who-save-popup" class="popup who-save__popup">
+			<div class="popup__body who-save__popup-bofy">
+				<div class="popup__content who-save__popup-content">
+					<a href="" class="popup__close close-popup">
+						<svg class="icon popup__close-icon">
+							<use xlink:href="images/icons/sprite.svg#icon-close-green"></use>
+						</svg>
+					</a>
+
+					<div class="popup__title "></div>
+					<div class="popup__info who-save__popup-info">
+						<div class="popup__container">
+							<h2 class="who-save__popup-title title">
+								Кто в России занимается восстановлением лесов
+							</h2>
+							<p class="who-save__popup-text article-text">
+								В марте ООН объявила о десятилетии восстановления экосистем. По прогнозам организации к
+								2030 году планируется
+								восстановить 350 миллионов гектар лесов.
+							</p>
+							<p class="who-save__popup-text article-text">
+								Однако предыдущий опыт показывает, что амбициозные планы могут не реализоваться. В 2014
+								году члены ООН обещали сократить
+								вырубку лесов в два раза к 2020 году. На самом же деле за этот период показатели не
+								только не приблизились к
+								прогнозируемым значениям, но и стали хуже – в 2018 году 3, 068 млн. га обезлесилось.
+
+							</p>
+							<img class="who-save__popup-img popup-img" src="images/forest-8.jpg" alt="image">
+							<p class="who-save__popup-text article-text">
+								Руководитель российского лесного отдела Гринписа Алексей Ярошенко утверждает, что
+								ежегодно в России засаживается 1 млн.
+								га. Однако в реальности эти цифры к лесовосстановлению не имеют никакого отношения.
+							</p>
+							<p class="who-save__popup-text article-text">
+								В 2014 году члены ООН обещали сократить вырубку лесов в два раза к 2020 году. На самом
+								же деле за этот период показатели
+								не только не приблизились к прогнозируемым значениям, но и стали хуже – в 2018 году 3,
+								068 млн. га обезлесилось
+							</p>
+							<p class="who-save__popup-text article-text">
+								«Основная часть того, что учитывается как лесовосстановление — это так называемое
+								естественное возобновление леса;
+								меньшая часть (примерно одна шестая) — это искусственное лесовосстановление, то есть
+								собственно посадка или в редких
+								случаях посев, — рассказывает Ярошенко. — Дело в том, что лесовосстановление в понимании
+								действующего законодательства —
+								это только самая начальная стадия воспроизводства лесов, а чтобы она дала какой-то
+								результат, нужен еще уход за молодым
+								лесом в течение первых полутора-двух десятилетий его жизни. Если этого ухода нет, то и
+								результат в подавляющем
+								большинстве случаев не достигается — вырубки зарастают теми же деревьями, которыми они
+								заросли бы сами (в основном
+								березой и осиной), а высаженные сеянцы деревьев гибнут или безнадежно отстают в росте».
+							</p>
+						</div>
+						<div class="popup-banner" style="background-image: url('images/banner-bg.jpg');">
+							<div class="popup-banner__content">
+								<p class="popup-banner__quote">
+									«Мы верим, что маленькие шаги каждого человека могут превратиться в большой шаг
+									для
+									человечества,
+									который нужен, чтобы
+									спасти нашу прекрасную Планету!»
+								</p>
+								<a class="button" href="#">
+									Сделать свой шаг
+								</a>
+							</div>
+						</div>
+						<div class="popup__container">
+							<p class="who-save__popup-text article-text">
+								В России существует 76,29 млн. га неиспользуемых сельхозземель. Если эти территории
+								засадить, то можно получить
+								дополнительные 282, 237 млн. кубометров древесины в год. Поэтому лесовосстановительные
+								мероприятия необходимо совмещать
+								с высадкой лесов на пустых землях, не затрагивая «древние», где обитают редкие,
+								вымирающие виды растений, птиц и
+								животных.
+							</p>
+							<p class="who-save__popup-text article-text">
+								Так, например, реликтовые леса служат прибежищем для филина, дикого северного оленя и
+								орлана-белохвоста, которые
+								занесены в Красную книгу.
+							</p>
+							<p class="who-save__popup-text article-text">
+								Основными борцами с обезлесиванием все-таки считаются члены «зеленого» общества и
+								добровольцы, работающие под эгидой
+								российского отделения Гринписа. Они не только высаживают лес в национальных парках,
+								например, в Куршской косе, Таганае и
+								Угре, но и возводят лесные массивы на неиспользуемых сельхозземлях. Однако существуют и
+								частные проекты.
+							</p>
+							<img class="who-save__popup-img popup-img" src="images/forestman.png" alt="image">
+							<p class="who-save__popup-text article-text">
+								Восстановлением лесов на территории России занимается Maraquia. Деятельность
+								представителей этого проекта связана с
+								лесовосстановлением в национальных парках страны.
+							</p>
+							<p class="who-save__popup-text article-text">
+								Они взаимодействуют с лесничими и на основании указаний, где погибли или погибают
+								деревья, пользователи выбирают
+								территорию для посадки. Проект уже восстановил 100 тысяч деревьев. Лесничие после
+								лесовосстановления и посадки
+								осуществляют уход за деревьями в течение последующих пяти лет.
+							</p>
+							<p class="who-save__popup-text article-text">
+								«Посади лес» за четыре года на пожертвования пользователей восстановил более 10
+								миллионов деревьев в 47 регионах России.
+								Проект в основном занимается восстановлением лесов в Центральной части страны. Кроме
+								пожертвований активистов в
+								мероприятиях по спасению лесных массивов совместно с проектом участвуют представители
+								бизнеса.
+							</p>
+							<p class="who-save__popup-text article-text">
+								Наш проект <strong>«Измени мир»</strong> принимает активное участие в восстановлении
+								лесов России.
+								Волонтеры, партнеры, а также
+								неравнодушные граждане со всех уголков страны вносят пожертвования и сами осуществляют
+								лесовосстановительные
+								мероприятия.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -719,11 +924,220 @@
 							федеральному проекту «Сохранение
 							лесов».
 						</p>
-						<a class="how-save__more btn-more" href="#">
+						<a class="how-save__more btn-more popup-link" href="#how-save-popup">
 							Читать польностью
 						</a>
 					</div>
 					<img class="how-save__img" src="images/forest-11.jpg" alt="images">
+				</div>
+			</div>
+		</div>
+		<div id="how-save-popup" class="popup how-save__popup">
+			<div class="popup__body how-save__popup-bofy">
+				<div class="popup__content how-save__popup-content">
+					<a href="" class="popup__close close-popup">
+						<svg class="icon popup__close-icon">
+							<use xlink:href="images/icons/sprite.svg#icon-close-green"></use>
+						</svg>
+					</a>
+
+					<div class="popup__title "></div>
+					<div class="popup__info how-save__popup-info">
+						<div class="popup__container">
+							<h2 class="how-save__popup-title title">
+								Как проходит восстановление лесных массивов
+							</h2>
+							<p class="how-save__popup-text article-text">
+								В Рослесхозе сообщают, что выбывание леса происходит по трем основным причинам:
+								лесопромышленная вырубка, пожары и
+								воздействие болезней и вредителей.
+							</p>
+							<p class="how-save__popup-text article-text">
+								К 2024 году ведомство прогнозирует восстановление 100% баланса между выбытием и
+								восстановлением леса.
+							</p>
+							<p class="how-save__popup-text article-text">
+								Мероприятия по возобновлению лесных массивов происходит по нацпроекту «Экология» и
+								федеральному проекту «Сохранение
+								лесов».
+							</p>
+							<img class="how-save__popup-img popup-img" src="images/forest-8.jpg" alt="image">
+							<p class="how-save__popup-text article-text">
+								В Рослесхозе сообщают, что выбывание леса происходит по трем основным причинам:
+								лесопромышленная вырубка, пожары и
+								воздействие болезней и вредителей. К 2024 году ведомство прогнозирует восстановление
+								100% баланса между выбытием и
+								восстановлением леса.
+							</p>
+							<p class="how-save__popup-text article-text">
+								Мероприятия по возобновлению лесных массивов происходит по нацпроекту «Экология» и
+								федеральному проекту «Сохранение
+								лесов». Однако план посадок у каждого региона свой, поэтому говорить, насколько активно
+								ведутся лесовосстановительные
+								работы можно только после предоставления ежегодных отчетов из каждого субъекта РФ. То
+								есть исходя из достижения годовых
+								показателей.
+							</p>
+						</div>
+						<div class="how-save__popup-diagram _bg-second">
+							<div class="how-save__popup-diagram__inner">
+								<div class="how-save__popup-diagram-title">
+									По итогам прошлого года выполнили, перевыполнили и приблизились к плану следующие
+									регионы:
+								</div>
+								<span class="how-save__popup-diagram-clarification">
+									План (га)
+								</span>
+								<div class="how-save__popup-diagram-content">
+									<ul class="how-save__popup-graph">
+										<li class="how-save__popup-graph-item how-save__popup-graph-item--tatarstan">
+											4.7 тыс. га
+										</li>
+										<li class="how-save__popup-graph-item how-save__popup-graph-item--chukotka">
+											1.2 га
+										</li>
+										<li class="how-save__popup-graph-item how-save__popup-graph-item--uliyanovsk">
+											1.7 тыс. га
+										</li>
+										<li class="how-save__popup-graph-item how-save__popup-graph-item--volgograd">
+											1.4 тыс. га
+										</li>
+										<li class="how-save__popup-graph-item how-save__popup-graph-item--tambov">
+											900 га
+										</li>
+										<li class="how-save__popup-graph-item how-save__popup-graph-item--orenburg">
+											738 га
+										</li>
+										<li class="how-save__popup-graph-item how-save__popup-graph-item--lipetsk">
+											280 га
+										</li>
+										<li class="how-save__popup-graph-item how-save__popup-graph-item--belgorod">
+											73 га
+										</li>
+									</ul>
+									<ul class="how-save__popup-descr">
+										<li class="how-save__popup-descr-item how-save__popup-descr-item--tatarstan">
+											Татарстан фактически (4.2 тыс. га)
+										</li>
+										<li class="how-save__popup-descr-item how-save__popup-descr-item--chukotka">
+											Чукотка фактически (3 тыс. га)
+										</li>
+										<li class="how-save__popup-descr-item how-save__popup-descr-item--uliyanovsk">
+											Ульяновская область фактически (1.6 тыс. га)
+										</li>
+										<li class="how-save__popup-descr-item how-save__popup-descr-item--volgograd">
+											Волгоградская область фактически (1.3 тыс. га)
+										</li>
+										<li class="how-save__popup-descr-item how-save__popup-descr-item--tambov">
+											Тамбовская область фактически (912 га)
+										</li>
+										<li class="how-save__popup-descr-item how-save__popup-descr-item--orenburg">
+											Оренбургская область фактически (740 га)
+										</li>
+										<li class="how-save__popup-descr-item how-save__popup-descr-item--lipetsk">
+											Липецкая область фактически (296 га)
+										</li>
+										<li class="how-save__popup-descr-item how-save__popup-descr-item--belgorod">
+											Белгородская область фактически (81 га)
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="popup__container">
+							<p class="how-save__popup-text article-text">
+								В республике Ингушетия и в Ставропольском крае показатели достигли 100%-процентного
+								выражения. Ростовская область
+								выполнила план по посадке лесов на 87,5%. В республике Калмыкия выполнено было 82%
+								запланированных лесовосстановительных
+								мероприятий.
+							</p>
+							<p class="how-save__popup-text article-text">
+								В рамках федерального проекта «Сохранение лесов» в 2020 году из бюджета было выделено
+								более 6,7 млрд. рублей, из них:
+							</p>
+							<ul class="how-save__popup-list article-items">
+								<li class="how-save__popup-item article-item">
+									2,4 млрд. рублей на увеличение площади лесовосстановления
+								</li>
+								<li class="how-save__popup-item article-item">
+									650 млн. рублей на закупку лесохозяйственного оборудования и техники
+								</li>
+								<li class="how-save__popup-item article-item">
+									41 млн. рублей на формирование запаса лесных семян
+								</li>
+							</ul>
+							<img class="how-save__popup-img popup-img" src="images/forest-15.jpg" alt="image">
+							<p class="how-save__popup-text article-text">
+								Кроме того, отдельное внимание уделяется уходу за высаженными деревьями.
+							</p>
+							<p class="how-save__popup-text article-text">
+								Однако кроме лесовосстановительных работ со стороны государства, частных проектов и
+								благотворительных фондов необходимо
+								создать условия для того, чтобы заинтересовать в возобновлении лесных массивов
+								арендаторов территорий.
+							</p>
+							<p class="how-save__popup-text article-text">
+								Многие хотят сэкономить и производят мнимую работу, якобы что-то сажается и за чем-то
+								ухаживают. Однако на деле ничего
+								не растет.
+							</p>
+							<p class="how-save__popup-text article-text">
+								Эксперты уверены, что если создастся законодательная база и условия аренды лесными
+								участками будут более
+								требовательными, а деятельность арендаторов будет контролироваться, то
+								лесовосстановление будет происходить в более
+								масштабных объемах.
+							</p>
+						</div>
+						<div class="popup-banner" style="background-image: url('images/banner-bg.jpg');">
+							<div class="popup-banner__content">
+								<p class="popup-banner__quote">
+									«Мы верим, что маленькие шаги каждого человека могут превратиться в большой шаг
+									для
+									человечества,
+									который нужен, чтобы
+									спасти нашу прекрасную Планету!»
+								</p>
+								<a class="button" href="#">
+									Сделать свой шаг
+								</a>
+							</div>
+						</div>
+						<div class="popup__container">
+							<p class="how-save__popup-text article-text">
+								В России система лесных питомников долгое время была заброшена. В последние годы она
+								начала
+								восстанавливаться. Сейчас
+								питомники находятся в ведении лесного хозяйства и их представители с волонтерами
+								фактически
+								выращивают посадочный
+								материал.
+							</p>
+							<p class="how-save__popup-text article-text">
+								Причем саженцы для восстановления лесов закупаются для проведения мероприятий в рамках
+								различных проектов и акций именно
+								в лесных питомниках. Активисты собирают средства на закуп посадочного материала и
+								последующего агроухода за растущими
+								деревьями. После чего волонтеры и члены различных фондов производят посадку растений.
+							</p>
+							<img class="how-save__popup-img popup-img" src="images/forest-16.jpg" alt="image">
+							<p class="how-save__popup-text article-text">
+								Большинство россиян думает, что лес может восстанавливаться самостоятельно. Частично это
+								правдивое мнение. Однако
+								огромные площади вырубки лесов для сельского хозяйства, строительства и лесной
+								промышленности будут возобн6овлять свои
+								ресурсы не один десяток лет. Многие породы растут до взрослого состояния 60-100 лет.
+							</p>
+							<p class="how-save__popup-text article-text">
+								Кроме того, это сложный процесс. Далеко не все сеянцы выживают, а даже те, кто пережил
+								первый год жизни, могут погибнуть
+								на следующем году взросления. Поэтому для более быстрого возобновления лесных ресурсов
+								применяется искусственное
+								восстановление лесов.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -760,6 +1174,133 @@
 						</a>
 					</div>
 
+				</div>
+			</div>
+		</div>
+		<div id="how-prepare-popup" class="popup how-prepare__popup">
+			<div class="popup__body how-prepare__popup-bofy">
+				<div class="popup__content how-prepare__popup-content">
+					<a href="" class="popup__close close-popup">
+						<svg class="icon popup__close-icon">
+							<use xlink:href="images/icons/sprite.svg#icon-close-green"></use>
+						</svg>
+					</a>
+
+					<div class="popup__title "></div>
+					<div class="popup__info how-prepare__popup-info">
+						<div class="popup__container">
+							<h2 class="how-prepare__popup-title title">
+								Кто в России занимается восстановлением лесов
+							</h2>
+							<p class="how-prepare__popup-text article-text">
+								В марте ООН объявила о десятилетии восстановления экосистем. По прогнозам организации к
+								2030 году планируется
+								восстановить 350 миллионов гектар лесов.
+							</p>
+							<p class="how-prepare__popup-text article-text">
+								Однако предыдущий опыт показывает, что амбициозные планы могут не реализоваться. В 2014
+								году члены ООН обещали сократить
+								вырубку лесов в два раза к 2020 году. На самом же деле за этот период показатели не
+								только не приблизились к
+								прогнозируемым значениям, но и стали хуже – в 2018 году 3, 068 млн. га обезлесилось.
+
+							</p>
+							<img class="how-prepare__popup-img popup-img" src="images/forest-8.jpg" alt="image">
+							<p class="how-prepare__popup-text article-text">
+								Руководитель российского лесного отдела Гринписа Алексей Ярошенко утверждает, что
+								ежегодно в России засаживается 1 млн.
+								га. Однако в реальности эти цифры к лесовосстановлению не имеют никакого отношения.
+							</p>
+							<p class="how-prepare__popup-text article-text">
+								В 2014 году члены ООН обещали сократить вырубку лесов в два раза к 2020 году. На самом
+								же деле за этот период показатели
+								не только не приблизились к прогнозируемым значениям, но и стали хуже – в 2018 году 3,
+								068 млн. га обезлесилось
+							</p>
+							<p class="how-prepare__popup-text article-text">
+								«Основная часть того, что учитывается как лесовосстановление — это так называемое
+								естественное возобновление леса;
+								меньшая часть (примерно одна шестая) — это искусственное лесовосстановление, то есть
+								собственно посадка или в редких
+								случаях посев, — рассказывает Ярошенко. — Дело в том, что лесовосстановление в понимании
+								действующего законодательства —
+								это только самая начальная стадия воспроизводства лесов, а чтобы она дала какой-то
+								результат, нужен еще уход за молодым
+								лесом в течение первых полутора-двух десятилетий его жизни. Если этого ухода нет, то и
+								результат в подавляющем
+								большинстве случаев не достигается — вырубки зарастают теми же деревьями, которыми они
+								заросли бы сами (в основном
+								березой и осиной), а высаженные сеянцы деревьев гибнут или безнадежно отстают в росте».
+							</p>
+						</div>
+						<div class="popup-banner" style="background-image: url('images/banner-bg.jpg');">
+							<div class="popup-banner__content">
+								<p class="popup-banner__quote">
+									«Мы верим, что маленькие шаги каждого человека могут превратиться в большой шаг
+									для
+									человечества,
+									который нужен, чтобы
+									спасти нашу прекрасную Планету!»
+								</p>
+								<a class="button" href="#">
+									Сделать свой шаг
+								</a>
+							</div>
+						</div>
+						<div class="popup__container">
+							<p class="how-prepare__popup-text article-text">
+								В России существует 76,29 млн. га неиспользуемых сельхозземель. Если эти территории
+								засадить, то можно получить
+								дополнительные 282, 237 млн. кубометров древесины в год. Поэтому лесовосстановительные
+								мероприятия необходимо совмещать
+								с высадкой лесов на пустых землях, не затрагивая «древние», где обитают редкие,
+								вымирающие виды растений, птиц и
+								животных.
+							</p>
+							<p class="how-prepare__popup-text article-text">
+								Так, например, реликтовые леса служат прибежищем для филина, дикого северного оленя и
+								орлана-белохвоста, которые
+								занесены в Красную книгу.
+							</p>
+							<p class="how-prepare__popup-text article-text">
+								Основными борцами с обезлесиванием все-таки считаются члены «зеленого» общества и
+								добровольцы, работающие под эгидой
+								российского отделения Гринписа. Они не только высаживают лес в национальных парках,
+								например, в Куршской косе, Таганае и
+								Угре, но и возводят лесные массивы на неиспользуемых сельхозземлях. Однако существуют и
+								частные проекты.
+							</p>
+							<img class="how-prepare__popup-img popup-img" src="images/forestman.png" alt="image">
+							<p class="how-prepare__popup-text article-text">
+								Восстановлением лесов на территории России занимается Maraquia. Деятельность
+								представителей этого проекта связана с
+								лесовосстановлением в национальных парках страны.
+							</p>
+							<p class="how-prepare__popup-text article-text">
+								Они взаимодействуют с лесничими и на основании указаний, где погибли или погибают
+								деревья, пользователи выбирают
+								территорию для посадки. Проект уже восстановил 100 тысяч деревьев. Лесничие после
+								лесовосстановления и посадки
+								осуществляют уход за деревьями в течение последующих пяти лет.
+							</p>
+							<p class="how-prepare__popup-text article-text">
+								«Посади лес» за четыре года на пожертвования пользователей восстановил более 10
+								миллионов деревьев в 47 регионах России.
+								Проект в основном занимается восстановлением лесов в Центральной части страны. Кроме
+								пожертвований активистов в
+								мероприятиях по спасению лесных массивов совместно с проектом участвуют представители
+								бизнеса.
+							</p>
+							<p class="how-prepare__popup-text article-text">
+								Наш проект <strong>«Измени мир»</strong> принимает активное участие в восстановлении
+								лесов России.
+								Волонтеры, партнеры, а также
+								неравнодушные граждане со всех уголков страны вносят пожертвования и сами осуществляют
+								лесовосстановительные
+								мероприятия.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -822,7 +1363,7 @@
 		</div>
 	</section>
 
-	<section id="applying" class="applying _format _bg-second">
+	<section id="applying" class="applying _format">
 		<div class="container">
 			<div class="applying__inner">
 				<h2 class="applying__title title">
