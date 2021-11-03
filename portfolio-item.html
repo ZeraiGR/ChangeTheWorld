@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Change world</title>
+	<meta name="description" content="Simple Starter Description">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/icons/earth-icon-green.svg">
+	<meta property="og:image" content="images/preview.jpg">
+
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<a class="logo logo--header" href="#">
+					<img src="images/icons/new-logo.svg" alt="logo">
+				</a>
+				<nav class="header__menu">
+					<ul class="header__list">
+						<li class="header__item">
+							<a class="header__link" href="#">
+								О фонде
+							</a>
+						</li>
+						<li class="header__item header__item--dropdown">
+							Задачи
+							<button class="header__menu-arrow"></button>
+							<ul class="header__sub-menu">
+								<li class="header__sub-item">
+									<a class="header__sub-link" href="#">
+										Восстановление лесов
+									</a>
+								</li>
+								<li class="header__sub-item">
+									<a class="header__sub-link" href="#">
+										Помощь детям
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">
+								Стать частью команды
+							</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">
+								Контакты
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<ul class="header__contacts">
+					<li class="header__contacts-item header__contacts-item--mail">
+						<a class="header__contacts-link" href="#">
+							izmenimir.rf@yandex.ru
+						</a>
+					</li>
+					<li class="header__contacts-item header__contacts-item--phone">
+						<a class="header__contacts-link" href="#">
+							+79932144312
+						</a>
+					</li>
+				</ul>
+				<button class="header__burger">
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<section class="hero hero--portfolio" style="background: url('images/forest-12.jpg') center/cover no-repeat">
+		<div class="hero__content">
+			<h1 class="hero__title">
+				Плановое вспахивание лесопосадки
+				в Подмосковье
+			</h1>
+			<p class="hero__descr">
+				Прошёл ровно год спустя нашей лесопосадки возле жилого комплекса “Заречье”, Подмосковье, а это значит,
+				что пришло время
+				провести плановое вспахивание земель, чтобы наш труд не пропал даром!
+			</p>
+		</div>
+	</section>
+
+	<section class="portfolio-video _format">
+		<div class="container">
+			<div class="portfolio-video__inner">
+				<h2 class="portfolio-video__title title">
+					Смотреть видео-отчет
+				</h2>
+				<div class="portfolio-video__wrapper" style="background-image: url('images/forest-17.jpg');">
+					<a class="portfolio-video__link" href="#">
+						<svg class="portfolio-video__play" width="51" height="51" viewBox="0 0 51 51"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M22.0532 50.15C13.9048 49.2191 6.05304 43.4691 2.52825 35.8516C-0.911523 28.4181 -0.428637 19.5988 3.81254 12.3923C5.45247 9.60611 9.53865 5.52608 12.3291 3.88868C20.7298 -1.04114 31.1393 -0.827691 39.0886 4.43729C41.0796 5.75588 44.0346 8.56367 45.4649 10.4963C48.7527 14.9382 50.2511 19.5832 50.2511 25.3323C50.2511 32.5931 47.7776 38.3839 42.5317 43.403C36.9912 48.7043 29.8879 51.0442 22.0524 50.1489L22.0532 50.15ZM29.8632 47.1296C34.8563 46.1306 39.8784 42.9518 43.0009 38.8143C48.1602 31.9777 49.022 23.1002 45.262 15.5198C39.797 4.50273 26.4375 -0.0385108 15.461 5.38995C7.19286 9.47889 2.23124 18.2666 3.09281 27.2956C3.37691 30.2728 3.98672 32.4309 5.30843 35.1364C9.17575 43.0525 17.7478 48.1064 26.4047 47.5739C27.3866 47.5135 28.943 47.3134 29.8635 47.1292L29.8632 47.1296ZM18.9006 36.4394C18.6503 36.1383 18.5943 34.1028 18.5943 25.3071C18.5943 15.5733 18.6298 14.5076 18.9649 14.1732C19.1687 13.9697 19.5818 13.8032 19.8828 13.8032C20.2163 13.8032 23.6712 15.8757 28.7225 19.106C37.1471 24.4932 37.476 24.7557 37.138 25.8191C37.0669 26.0426 33.292 28.6065 28.7495 31.5167C20.2792 36.9432 19.6008 37.2823 18.9006 36.4397L18.9006 36.4394ZM33.0549 25.4546C33.1535 25.3624 30.5679 23.5735 27.3089 21.4792L21.3835 17.6715V32.9968L27.1295 29.3093C30.2897 27.2813 32.9562 25.5466 33.0549 25.4543V25.4546Z"
+								fill-opacity="0.8" />
+						</svg>
+						Воспроизвести видео
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="portfolio-text _format _bg-second">
+		<div class="container">
+			<div class="portfolio-text__inner">
+				<h2 class="portfolio-text__title title">
+					Заголовок
+				</h2>
+				<div class="portfolio-text__content">
+					<p>
+						Прошёл ровно год спустя нашей лесопосадки возле жилого комплекса “Заречье”, Подмосковье, а это
+						значит, что пришло время
+						провести плановое вспахивание земель, чтобы наш труд не пропал даром! Прошёл ровно год спустя
+						нашей лесопосадки возле
+						жилого комплекса “Заречье”, Подмосковье, а это значит, что пришло время провести плановое
+						вспахивание земель, чтобы наш
+						труд не пропал даром! Прошёл ровно год спустя нашей лесопосадки возле жилого комплекса
+						“Заречье”, Подмосковье, а это
+						значит, что пришло время провести плановое вспахивание земель, чтобы наш труд не пропал даром!
+					</p>
+					<p>
+						Прошёл ровно год спустя нашей лесопосадки возле жилого комплекса “Заречье”, Подмосковье, а это
+						значит, что пришло время
+						провести плановое вспахивание земель, чтобы наш труд не пропал даром! Прошёл ровно год спустя
+						нашей лесопосадки возле
+						жилого комплекса “Заречье”, Подмосковье, а это значит, что пришло время провести плановое
+						вспахивание земель, чтобы наш
+						труд не пропал даром! Прошёл ровно год спустя нашей лесопосадки возле жилого комплекса
+						“Заречье”, Подмосковье, а это
+						значит, что пришло время провести плановое вспахивание земель, чтобы наш труд не пропал даром!
+					</p>
+					<p>
+						Прошёл ровно год спустя нашей лесопосадки возле жилого комплекса “Заречье”, Подмосковье, а это
+						значит, что пришло
+						время
+						провести плановое вспахивание земель, чтобы наш труд не пропал даром! Прошёл ровно год спустя
+						нашей лесопосадки
+						возле
+						жилого комплекса “Заречье”, Подмосковье, а это значит, что пришло время провести плановое
+						вспахивание земель, чтобы
+						наш
+						труд не пропал даром! Прошёл ровно год спустя нашей лесопосадки возле жилого комплекса
+						“Заречье”, Подмосковье, а это
+						значит, что пришло время провести плановое вспахивание земель, чтобы наш труд не пропал даром!
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="portfolio-gallery _format">
+		<div class="container">
+			<div class="portfolio-gallery__inner">
+				<h2 class="portfolio-gallery__title title">
+					Галерея
+				</h2>
+				<div class="portfolio-gallery__content">
+					<div class="portfolio-gallery__item">
+						<img class="portfolio-gallery__image" src="images/forest-7.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-long-6.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-16.jpg" alt="images"
+							data-fancybox="gallery">
+
+						<img class="portfolio-gallery__image" src="images/forest-10.png" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-19.jpg" alt="images"
+							data-fancybox="gallery">
+					</div>
+					<div class="portfolio-gallery__item">
+						<img class="portfolio-gallery__image" src="images/forest-long-6.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-7.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-long-1.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-10.png" alt="images"
+							data-fancybox="gallery">
+					</div>
+					<div class="portfolio-gallery__item">
+						<img class="portfolio-gallery__image" src="images/forest-7.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-long-6.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-16.jpg" alt="images"
+							data-fancybox="gallery">
+
+						<img class="portfolio-gallery__image" src="images/forest-10.png" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-19.jpg" alt="images"
+							data-fancybox="gallery">
+					</div>
+					<div class="portfolio-gallery__item">
+						<img class="portfolio-gallery__image" src="images/forest-long-6.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-7.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-long-1.jpg" alt="images"
+							data-fancybox="gallery">
+						<img class="portfolio-gallery__image" src="images/forest-10.png" alt="images"
+							data-fancybox="gallery">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="applying" class="applying _format _bg-second">
+		<div class="container">
+			<div class="applying__inner">
+				<h2 class="applying__title title">
+					Другие реализованные проекты
+				</h2>
+				<ul class="applying__items universal-items">
+					<li class="universal-item">
+						<a class="universal-item__content" href="#">
+							<div class="universal-item__top-content">
+								<img class="universal-item__image" src="images/save-forest.jpg" alt="forest">
+								<h3 class="universal-item__name">
+									Помощь детям в Красноярске
+								</h3>
+								<div class="universal-item__cover"></div>
+							</div>
+							<div class="universal-item__main-content">
+								<p class="universal-item__descr">
+									25 сентября 2021 года наши специалисты посетили интернат “Солнышко”. Было
+									проведено несколько приватных бесед со
+									школьниками. Обсудили насущные проблемы подростков.
+								</p>
+								<span class="universal-item__more btn-more">
+									Смотреть полный отчёт
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="universal-item">
+						<a class="universal-item__content" href="#">
+							<div class="universal-item__top-content">
+								<img class="universal-item__image" src="images/help-children.jpg" alt="forest">
+								<h3 class="universal-item__name">
+									Встреча с выпускниками в Железногорске
+								</h3>
+								<div class="universal-item__cover"></div>
+							</div>
+							<div class="universal-item__main-content">
+								<p class="universal-item__descr">
+									В пятницу 15 октября наша команда встретилась с выпускниками из детского дома
+									номер 26, обсудили планы на жизнь,
+									проконсультировали их по важнейшим вопросам...
+								</p>
+								<span class="universal-item__more btn-more">
+									Смотреть полный отчёт
+								</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<a class="footer__logo" href="#">
+					<img class="footer__logo-icon" src="images/icons/footer-logo.svg" alt="logo">
+				</a>
+				<div class="footer__col">
+					<div class="footer__heading">
+						Общая информация
+					</div>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								Уставные документы
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								Реквизиты фонда
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								Политика конфиденциальности
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								Карта сайта
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__col">
+					<div class="footer__heading">
+						Меню
+					</div>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								О фонде
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								Контакты
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								Помощь детям
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								Восстановление лесов
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								Стать частью команды
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								Реализованные проекты
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__col">
+					<div class="footer__heading">
+						Контакты
+					</div>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								izmenimir.rf@yandex.ru
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">
+								+7 (927) 321-23-21
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+
+	<script src="js/common.js"></script>
+
+</body>
+
+</html>

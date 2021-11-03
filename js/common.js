@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const burgerBtn = document.querySelector('.header__burger');
         if (burgerBtn) {
-            const headerNav = document.querySelector('.header__nav');
+            const headerNav = document.querySelector('.header__menu');
             burgerBtn.addEventListener('click', function (e) {
                 document.body.classList.toggle('lock');
                 this.classList.toggle('_active');
@@ -223,33 +223,46 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function closeResume() {
+        const resumeContent = document.querySelector('.resume__content'),
+            resumeBtnOpen = document.querySelector('.resume__open-btn');
+
+        resumeContent.classList.remove('show');
+        resumeBtnOpen.classList.remove('hide');
+    }
+
+    function openResume() {
+        const resumeContent = document.querySelector('.resume__content'),
+            resumeBtnOpen = document.querySelector('.resume__open-btn');
+
+        resumeContent.classList.add('show');
+        resumeBtnOpen.classList.add('hide');
+    }
+
     function resumeHundler() {
-        const resumeBtnOpen = document.querySelector('.resume__open-btn'),
-            resumeContent = document.querySelector('.resume__content'),
+        const resumeContent = document.querySelector('.resume__content'),
+            resumeBtnOpen = document.querySelector('.resume__open-btn'),
             resumeCloseBtn = document.querySelector('.resume__close');
 
-        const toggleContent = function () {
-            resumeContent.classList.add('show');
-            resumeBtnOpen.classList.add('hide');
-        };
+        if (resumeBtnOpen) {
+            resumeBtnOpen.addEventListener('click', function (e) {
+                e.stopPropagation();
+                openResume();
+            });
 
-        resumeBtnOpen.addEventListener('click', function (e) {
-            e.stopPropagation();
-            toggleContent();
-        });
+            document.addEventListener('click', function (e) {
+                const target = e.target,
+                    itsMenu =
+                        target == resumeContent ||
+                        resumeContent.contains(target),
+                    itsCloseBtn = target == resumeCloseBtn,
+                    menuIsActive = resumeContent.classList.contains('show');
 
-        document.addEventListener('click', function (e) {
-            const target = e.target,
-                itsMenu =
-                    target == resumeContent || resumeContent.contains(target),
-                itsCloseBtn = target == resumeCloseBtn,
-                menuIsActive = resumeContent.classList.contains('show');
-
-            if ((!itsMenu || itsCloseBtn) && menuIsActive) {
-                resumeContent.classList.remove('show');
-                resumeBtnOpen.classList.remove('hide');
-            }
-        });
+                if ((!itsMenu || itsCloseBtn) && menuIsActive) {
+                    closeResume();
+                }
+            });
+        }
     }
 
     function btnMoreHundler() {
@@ -300,29 +313,127 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
+    function resumeHandler() {
+        const resume = document.querySelector('.resume__list');
+
+        if (resume) {
+            let scrollTimeout;
+            resume.addEventListener('click', function (e) {
+                let link = e.target;
+
+                if (link.classList.contains('resume__link')) {
+                    e.preventDefault();
+                    scrollToTarget(link.hash);
+                }
+            });
+
+            let isThrottled = false;
+
+            window.addEventListener('scroll', () => {
+                // clearTimeout(scrollTimeout);
+                isThrottled = true;
+                scrollTimeout = setTimeout(onScroll, 200);
+            });
+
+            function onScroll() {
+                isThrottled = false;
+                let resume = document.querySelector('.resume__list');
+                let links = document.querySelectorAll('.resume__link');
+                let pos = window.pageYOffset;
+
+                for (let i = links.length - 1; i >= 0; i--) {
+                    let link = links[i];
+                    let target = document.querySelector(link.hash);
+
+                    if (pos + window.innerHeight / 4 > target.offsetTop) {
+                        resume
+                            .querySelector('.resume__link--active')
+                            .classList.remove('resume__link--active');
+                        link.classList.add('resume__link--active');
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    function scrollToTarget(id) {
+        let target = document.querySelector(id);
+
+        if (target !== null) {
+            let pos = target.offsetTop + 10;
+
+            window.scrollTo({
+                top: pos,
+                behavior: 'smooth',
+            });
+
+            closeResume();
+        }
+    }
+
+    function alignCards() {
+        const cardsContent = document.querySelectorAll(
+            '.universal-item__main-content'
+        );
+
+        if (cardsContent && window.screen.width >= 576) {
+            let height = [];
+            cardsContent.forEach((el) => {
+                height.push(el.clientHeight);
+            });
+            const maxElHeight = Math.max(...height);
+
+            cardsContent.forEach((el) => {
+                el.style.height = maxElHeight + 'px';
+            });
+        }
+    }
+
+    function initSliders() {
+        const sliders = {};
+
+        if (window.innerWidth <= 1080) {
+            const helpSlider = new Swiper('.help__swiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                freeMode: true,
+            });
+            sliders['helpSlider'] = helpSlider;
+        }
+
+        const importanceSlider = new Swiper('.importance__slider', {
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+        });
+
+        sliders['importanceSlider'] = importanceSlider;
+
+        return sliders;
+    }
+
+    const slidersInit = initSliders();
+
     burgerMenu();
     tubsManager();
     resumeHundler();
     btnMoreHundler();
     articleTabs();
     popupLogic();
-
-    const importanceSlider = new Swiper('.importance__slider', {
-        slidesPerView: 1,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true,
-        },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: false,
-        },
-    });
+    resumeHandler();
+    alignCards();
 
     Fancybox.bind('#grouped-images-1 a', {});
 
