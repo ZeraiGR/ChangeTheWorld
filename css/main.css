@@ -46,7 +46,8 @@ body {
 	overflow-x: hidden;
 }
 
-body.lock {
+body.lock,
+body.lock_resume {
 	overflow: hidden;
 }
 
@@ -1146,6 +1147,11 @@ body._touch .header__list>li {
   position: fixed;
   z-index: 4;
   top: 7.5rem;
+  transition: all 0.5s;
+}
+
+.resume.hide {
+	transform: translateX(-300%);
 }
 
 .resume__open-btn {
@@ -2062,9 +2068,9 @@ body._touch .header__list>li {
     background-position: center center;
     transform: rotate(348deg);
     width: 44.4rem;
-    height: 46rem;
+   height: 47rem;
     right: -20rem;
-    bottom: -20rem;
+    bottom: -23rem;
     transition: transform 1s ease;
 }
 
@@ -2112,6 +2118,10 @@ body._touch .header__list>li {
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: all 0.8s ease 0s;
+}
+
+.popup.full {
+	top: 0;
 }
 
 .popup.open {
@@ -2212,9 +2222,9 @@ body._touch .header__list>li {
     background-position: center center;
     transform: rotate(348deg);
     width: 44.4rem;
-    height: 46rem;
-    right: -12rem;
-    bottom: -10.75rem;
+    height: 47rem;
+    right: -11rem;
+    bottom: -6.75rem;
     transition: transform 1s ease;
 }
 
@@ -2470,9 +2480,9 @@ body._touch .header__list>li {
     background-position: center center;
     transform: rotate(348deg);
     width: 44.4rem;
-    height: 46rem;
+    height: 47rem;
     right: -20rem;
-    bottom: -20rem;
+    bottom: -23rem;
     transition: transform 1s ease;
 }
 
@@ -2755,6 +2765,58 @@ body._touch .header__list>li {
   margin-bottom: 1.5rem;
   font-size: 0.875rem;
   text-align: center;
+}
+
+.scroll-up {
+	position: fixed;
+	right: 3.125rem;
+	bottom: 3.125rem;
+	z-index: 3;
+	width: 3.125rem;
+	height: 3.125rem;
+	color: #dcdcdc;
+	cursor: pointer;
+	visibility: hidden;
+	border-radius: 50px;
+	box-shadow: inset 0 0 0 0.25rem #dcdcdc;
+	opacity: 0;
+	transition: 0.2s;
+	transform: translateY(25px);
+}
+
+.scroll-up.hide {
+	transform: translateX(200%);
+}
+
+.scroll-up::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	font-size: 1.25rem;
+	content: "↑";
+}
+
+.scroll-up:hover {
+	color: var(--accent);
+}
+
+.scroll-up--active {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.scroll-up__svg-path {
+	box-sizing: border-box;
+	fill: none;
+	stroke: var(--accent);
+	stroke-width: 0.25rem;
+	transition: 0.2s;
 }
 
 /* footer styles */

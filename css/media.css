@@ -6,7 +6,8 @@
 		right: -400px;
 	}
 
-	.our-actions::after {
+	.our-actions::after,
+	.how-we-work::after {
 		display: none;
 	}
 }
@@ -235,13 +236,23 @@
 	.children-promo__inner,
 	.tasks__inner,
 	.importance__content,
-	.forest-promo__inner {
+	.forest-promo__inner,
+	.forest-importance__top-content,
+	.who-save__content-item:nth-child(odd),
+	.how-prepare__content-item,
+	.how-we-work__content-item:nth-child(even) {
 		flex-direction: column-reverse;
 	}
 
 	.peculiarities__inner,
 	.help-ways__inner,
-	.alternatives__inner {
+	.alternatives__inner,
+	.recovery-ways__content-top,
+	.recovery-ways__tabs-content.recovery-ways__tabs-content--active,
+	.forest-history__inner,
+	.how-save__content-item,
+	.how-we-work__content-item:nth-child(odd),
+	.who-save__content-item:nth-child(even) {
 		flex-direction: column;
 	}
 
@@ -251,13 +262,38 @@
 	.help-ways__images-wrapper,
 	.importance__slider,
 	.alternatives__images,
-	.forest-promo__image {
+	.forest-promo__image,
+	.recovery-ways__img,
+	.recovery-ways__tab-img,
+	.forest-importance__image,
+	.forest-history__image,
+	.who-save__img,
+	.how-save__img,
+	.how-prepare__img,
+	.how-we-work__img {
 		display: none;
+	}
+
+	.recovery-ways__info {
+		margin-right: 0;
+	}
+
+	.recovery-ways__content-top {
+		margin-bottom: 1.5rem;
+	}
+
+	.recovery-ways__tabs-list {
+		margin-bottom: 1.2rem;
 	}
 
 	.forest-promo__diagram {
 		width: 100%;
 		height: 32rem;
+	}
+
+	.who-save__content-item,
+	.how-we-work__content-item {
+		margin-bottom: 0;
 	}
 
 	.importance--article .importance__info {
@@ -502,6 +538,39 @@
 		height: 34rem;
 	}
 
+	.forest-importance__diagram-graph {
+		max-width: 55%;
+	}
+
+	.forest-importance__graph-item--canada {
+		padding-left: 23.875rem;
+	}
+
+	.forest-importance__graph-item--canada::before {
+		width: 23.25rem;
+	}
+
+	.forest-importance__graph-item--russia {
+		padding-left: 15.875rem;
+	}
+
+	.forest-importance__graph-item--russia::before {
+		width: 15.125rem;
+	}
+
+	.forest-importance__graph-item--ocean {
+		padding-left: 14.938rem;
+	}
+
+	.forest-importance__graph-item--ocean::before {
+		width: 14.313rem;
+	}
+
+	.scroll-up {
+		right: 2rem;
+		bottom: 2rem;
+	}
+
 	.footer__inner {
 		flex-direction: column;
 		padding: 3rem 0;
@@ -708,6 +777,32 @@
 		left: 2.163rem;
 	}
 
+	.recovery-ways__tabs-list {
+		flex-wrap: wrap;
+		margin-bottom: 0;
+	}
+
+	.recovery-ways__tabs-item {
+		margin-bottom: 1rem;
+	}
+
+	.recovery-ways__tabs-item:nth-child(2) {
+		margin-right: 1.25rem;
+	}
+
+	.recovery-ways__tabs-item:last-child {
+		margin-left: 0;
+	}
+
+	.forest-importance__diagram-content {
+		flex-direction: column-reverse;
+	}
+
+	.forest-importance__diagram-descr {
+		margin-bottom: 2rem;
+		margin-left: 0;
+	}
+
 	.forest-promo__diagram,
 	.forest-promo__dark {
 		display: none;
@@ -753,15 +848,51 @@
 	.alternatives__content,
 	.tasks__content,
 	.peculiarities__content,
-	.children-promo__content {
+	.children-promo__content,
+	.forest-history__content,
+	.recovery-ways__info,
+	.forest-promo__content,
+	.forest-promo__image,
+	.how-save__info,
+	.how-prepare__info {
 		margin-bottom: 2rem;
 	}
 
 	.alternatives__text:last-child,
 	.tasks__text:last-child,
 	.peculiarities__list:last-child,
-	.children-promo__text:last-child {
+	.children-promo__text:last-child,
+	.forest-promo__text:nth-child(4),
+	.recovery-ways__heading, 
+	.who-save__text--first {
 		margin-bottom: 0;
+	}
+
+	.who-save__text:first-child {
+		margin-top: 0;
+	}
+
+	.who-save__content-item:nth-child(odd) .who-save__img {
+		margin-right: 0;
+		margin: 2rem 0;
+	}
+
+	.who-save__content-item:nth-child(even) .who-save__img {
+		margin-left: 0;
+		max-width: 100%;
+		margin-top: 2rem;
+	}
+
+	.how-we-work__content-item:nth-child(odd) .how-we-work__img {
+		margin-left: 0;
+		max-width: 100%;
+		margin: 1rem 0;
+	}
+
+	.how-we-work__content-item:nth-child(even) .how-we-work__img {
+		margin-right: 0;
+		max-width: 100%;
+		margin-top: 2rem;
 	}
 
 	.alternatives__image {
@@ -775,11 +906,26 @@
 	.help-ways__images-wrapper,
 	.importance__slider,
 	.alternatives__images,
-	.forest-promo__image {
+	.forest-promo__image,
+	.recovery-ways__img,
+	.recovery-ways__tab-img,
+	.forest-history__image,
+	.who-save__img,
+	.how-save__img,
+	.how-prepare__img,
+	.how-we-work__img {
 		display: block;
 		margin-right: 0;
 		margin-left: 0;
 		max-width: 100%;
+	}
+
+	.recovery-ways__tab-img {
+		height: auto;
+	}
+
+	.recovery-ways__tab-info {
+		margin-bottom: 1rem;
 	}
 
 	.peculiarities__image,
@@ -792,6 +938,8 @@
 		display: block;
 		max-width: 100%;
 	}
+
+	
 
 	.importance--article .importance__slider-wrapper {
 		max-width: 100%;
@@ -819,6 +967,14 @@
 	.social-work__more {
 		font-size: 0.8rem;
 		line-height: 1.2rem;
+	}
+
+	.forest-importance__graph-item--canada {
+		padding-left: 21.875rem;
+	}
+
+	.forest-importance__graph-item--canada::before {
+		width: 21.25rem;
 	}
 }
 

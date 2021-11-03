@@ -47,6 +47,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 currentPopup.classList.add('open');
+
+                if (
+                    document.getElementById('header').classList.contains('hide')
+                ) {
+                    currentPopup.classList.add('full');
+                }
+
                 currentPopup.addEventListener('click', (e) => {
                     if (!e.target.closest('.popup__content')) {
                         popupClose(e.target.closest('.popup'));
@@ -229,6 +236,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         resumeContent.classList.remove('show');
         resumeBtnOpen.classList.remove('hide');
+        if (document.body.classList.contains('_touch')) {
+            document.body.classList.remove('lock_resume');
+        }
     }
 
     function openResume() {
@@ -237,6 +247,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         resumeContent.classList.add('show');
         resumeBtnOpen.classList.add('hide');
+        if (document.body.classList.contains('_touch')) {
+            document.body.classList.add('lock_resume');
+        }
     }
 
     function resumeHundler() {
@@ -390,6 +403,91 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function scrollUp() {
+        const offset = 900;
+        const scrollUp = document.querySelector('.scroll-up');
+        const scrollUpSvgPath = document.querySelector('.scroll-up__svg-path');
+        const pathLength = scrollUpSvgPath.getTotalLength();
+
+        scrollUpSvgPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
+        scrollUpSvgPath.style.transition = 'stroke-dashoffset 20ms';
+
+        const updateDashoffset = () => {
+            const height =
+                document.documentElement.scrollHeight - window.innerHeight;
+            const dashoffset = pathLength - (getTop() * pathLength) / height;
+            scrollUpSvgPath.style.strokeDashoffset = dashoffset;
+        };
+
+        const getTop = () =>
+            window.pageYOffset || document.documentElement.scrollTop;
+
+        window.addEventListener('scroll', () => {
+            updateDashoffset();
+            if (getTop() > offset) {
+                scrollUp.classList.add('scroll-up--active');
+            } else {
+                scrollUp.classList.remove('scroll-up--active');
+            }
+        });
+
+        scrollUp.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        });
+    }
+
+    function headerSwitcher() {
+        let lastScrollTop = 0,
+            heroHeight = document.querySelector('section').offsetHeight;
+
+        window.addEventListener(
+            'scroll',
+            function () {
+                if (
+                    document.documentElement.scrollTop >
+                    heroHeight + document.querySelector('header').offsetHeight
+                ) {
+                    const st =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+                    if (st > lastScrollTop) {
+                        document.getElementById('header').classList.add('hide');
+                        if (document.getElementById('resume')) {
+                            document
+                                .getElementById('resume')
+                                .classList.add('hide');
+                        }
+                        document
+                            .getElementById('scroll-up')
+                            .classList.add('hide');
+                    } else {
+                        document
+                            .getElementById('header')
+                            .classList.remove('hide');
+                        if (document.getElementById('resume')) {
+                            document
+                                .getElementById('resume')
+                                .classList.remove('hide');
+                        }
+                        if (document.getElementById('scroll-up')) {
+                            document
+                                .getElementById('scroll-up')
+                                .classList.remove('hide');
+                        }
+                        document.querySelectorAll('.popup').forEach((popup) => {
+                            popup.classList.remove('full');
+                        });
+                    }
+                    lastScrollTop = st;
+                }
+            },
+            false
+        );
+    }
+
     function initSliders() {
         const sliders = {};
 
@@ -434,6 +532,8 @@ document.addEventListener('DOMContentLoaded', function () {
     popupLogic();
     resumeHandler();
     alignCards();
+    scrollUp();
+    headerSwitcher();
 
     Fancybox.bind('#grouped-images-1 a', {});
 

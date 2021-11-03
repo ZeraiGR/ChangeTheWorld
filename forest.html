@@ -24,7 +24,7 @@
 
 <body>
 
-	<header class="header lock-padding">
+	<header id="header" class="header">
 		<div class="container">
 			<div class="header__inner">
 				<a class="logo logo--header" href="#">
@@ -77,11 +77,14 @@
 						</a>
 					</li>
 				</ul>
+				<button class="header__burger">
+					<span></span>
+				</button>
 			</div>
 		</div>
 	</header>
 
-	<div class="resume">
+	<div id="resume" class="resume">
 		<button class="resume__open-btn button" type="button">
 			Раскрыть содержание >>
 		</button>
@@ -389,7 +392,7 @@
 		</div>
 	</section>
 
-	<!-- <section id="forest-importance" class="forest-importance _format">
+	<section id="forest-importance" class="forest-importance _format">
 		<div class="container">
 			<div class="forest-importance__inner">
 				<div class="forest-importance__top-content">
@@ -538,9 +541,9 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section id="forest-history" class="forest-history _format _bg-second">
+	<section id="forest-history" class="forest-history _format _bg-second">
 		<div class="container">
 			<div class="forest-history__inner">
 				<div class="forest-history__content">
@@ -725,9 +728,9 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section id="who-save" class="who-save _format">
+	<section id="who-save" class="who-save _format">
 		<div class="container">
 			<div class="who-save__inner">
 				<div class="who-save__content-item">
@@ -736,8 +739,9 @@
 						<h2 class="who-save__title title">
 							Кто в России занимается восстановлением лесов
 						</h2>
-						<p class="who-save__text article-text">
-							Наш проект «Измени мир» принимает активное участие в восстановлении лесов России. Волонтеры,
+						<p class="who-save__text--first article-text">
+							Наш проект <strong>«Измени мир»</strong> принимает активное участие в восстановлении лесов
+							России. Волонтеры,
 							партнеры, а также
 							неравнодушные граждане со всех уголков страны вносят пожертвования и сами осуществляют
 							лесовосстановительные
@@ -900,9 +904,9 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section id="how-save" class="how-save _format _bg-second">
+	<section id="how-save" class="how-save _format _bg-second">
 		<div class="container">
 			<div class="how-save__inner">
 				<div class="how-save__content-item">
@@ -1141,9 +1145,9 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section id="how-prepare" class="how-prepare _format">
+	<section id="how-prepare" class="how-prepare _format">
 		<div class="container">
 			<div class="how-prepare__inner">
 				<div class="how-prepare__content-item">
@@ -1445,9 +1449,9 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section id="how-we-work" class="how-we-work _format _bg-second">
+	<section id="how-we-work" class="how-we-work _format _bg-second">
 		<div class="container">
 			<div class="how-we-work__inner">
 				<div class="how-we-work__content-item">
@@ -1628,7 +1632,7 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<section id="applying" class="applying _format">
 		<div class="container">
@@ -1686,6 +1690,16 @@
 			</div>
 		</div>
 	</section>
+
+	<div id="scroll-up" class="scroll-up">
+		<svg class="scroll-up__svg" viewBox='-2 -2 52 52'>
+			<path class="scroll-up__svg-path" d="
+								M24,0
+								a24,24 0 0,1 0,48
+								a24,24 0 0,1 0,-48
+							" />
+		</svg>
+	</div>
 
 	<footer class="footer">
 		<div class="container">
